@@ -275,7 +275,7 @@ rules:
 sub-rules:
   SUB-RULES:
     - RULE-SET,github_domain,Github
-    - RULE-SET,microsoft_domain,Github
+    - RULE-SET,microsoft_domain,microsoft
     - RULE-SET,twitter_domain,Twitter
     - RULE-SET,youtube_domain,YouTube
     - RULE-SET,google_domain,Google
@@ -321,8 +321,8 @@ rule-providers:
     #path: ./ruleset/ehentai_domain.mrs
   microsoft_domain:
     <<: *domain_mrs
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.yaml"
-    path: ./ruleset/microsoft_domain.yaml
+    url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs"
+    path: ./ruleset/microsoft_domain.mrs
   github_domain:
     <<: *domain_mrs
     url: "https://jsd.onmicrosoft.cn/gh/00@meta/geo/geosite/github.mrs"
