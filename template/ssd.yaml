@@ -22,14 +22,14 @@ proxy-groups:
   - { name: Telegram, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Telegram.webp }
   - { name: Twitter, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Twitter.webp }
   - { name: 哔哩哔哩, <<: *direct, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/BiliBili.webp }
-  - { name: 哔哩哔哩国际版, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Biliintl.webp }
-  - { name: Ehentai, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/E-Hentai.webp }
-  - { name: 巴哈姆特, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Bahamut.webp }
+  #- { name: 哔哩哔哩国际版, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Biliintl.webp }
+ # - { name: Ehentai, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/E-Hentai.webp }
+ # - { name: 巴哈姆特, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Bahamut.webp }
   - { name: YouTube, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/YouTube.webp }
   - { name: NETFLIX, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Netflix.webp }
-  - { name: Spotify, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Spotify.webp }
+ # - { name: Spotify, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Spotify.webp }
   - { name: Github, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/GitHub.webp }
-  - { name: Pixiv, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Pixiv.webp }
+#  - { name: Pixiv, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Pixiv.webp }
   ############ 全国家分组自动选择 ############
   - { name: 🇺🇸美国自动, <<: *u, hidden: true, filter: "(?i)(?:🇺🇸|(?:^|[\\s_-])(US)(?:(?=$|[\\s_-])|(?:[-_0-9]+(?=$|[\\s_-])))|(?:^|[\\s_-])[-_0-9]*US(?=$|[\\s_-])|美国|United States|(?:(?:^|[\\s_-])CT(?=$|[\\s_-]))|UnitedStates)" }
   - { name: 🇧🇷巴西自动, <<: *u, hidden: true, filter: "(?i)(?:🇧🇷|(?:^|[\\s_-])(BR)(?:(?=$|[\\s_-])|(?:[-_0-9]+(?=$|[\\s_-])))|(?:^|[\\s_-])[-_0-9]*BR(?=$|[\\s_-])|巴西|Brazil)" }
@@ -285,12 +285,12 @@ sub-rules:
     - RULE-SET,google_domain,Google
     - RULE-SET,telegram_domain,Telegram
     - RULE-SET,netflix_domain,NETFLIX
-    - RULE-SET,ehentai_domain,Ehentai
+    #- RULE-SET,ehentai_domain,Ehentai
     - RULE-SET,bilibili_domain,哔哩哔哩
-    - RULE-SET,biliintl_domain,哔哩哔哩国际版
-    - RULE-SET,bahamut_domain,巴哈姆特
-    - RULE-SET,spotify_domain,Spotify
-    - RULE-SET,pixiv_domain,Pixiv
+    #- RULE-SET,biliintl_domain,哔哩哔哩国际版
+    #- RULE-SET,bahamut_domain,巴哈姆特
+    #- RULE-SET,spotify_domain,Spotify
+    #- RULE-SET,pixiv_domain,Pixiv
     - RULE-SET,geolocation-!cn,🚀全球代理
     - RULE-SET,google_ip,Google,no-resolve
     - RULE-SET,netflix_ip,NETFLIX,no-resolve
