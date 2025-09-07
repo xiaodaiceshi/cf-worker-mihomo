@@ -17,17 +17,20 @@ proxy-groups:
   - { name: ⚡️均衡负载, <<: *u, strategy: round-robin, type: load-balance }
   - { name: 🔯故障转移, <<: *u, type: fallback }
   - { name: Google, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Google.webp }
+  - { name: ai, <<: *proxy, icon: https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/ai.png }
+  - { name: onedrive, <<: *proxy, icon: https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/onedrive.png }
+  - { name: apple, <<: *proxy, icon: https://raw.githubusercontent.com/Kwisma/rules/main/icon/webp/100/Apple.webp }
   - { name: emby, <<: *proxy, icon: https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/emby.png }
   - { name: Telegram, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Telegram.webp }
   - { name: Twitter, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Twitter.webp }
   - { name: 哔哩哔哩, <<: *direct, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/BiliBili.webp }
-  - { name: microsoft, <<: *proxy, icon: https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/microsoft.png }
+  - { name: microsoft, <<: *proxy, icon: https://raw.githubusercontent.com/Kwisma/rules/main/icon/webp/100/Microsoft.webp }
   #- { name: 哔哩哔哩国际版, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Biliintl.webp }
   #- { name: Ehentai, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/E-Hentai.webp }
   #- { name: 巴哈姆特, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Bahamut.webp }
   - { name: YouTube, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/YouTube.webp }
   - { name: NETFLIX, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Netflix.webp }
-  - { name: Spotify, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Spotify.webp }
+  #- { name: Spotify, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Spotify.webp }
   - { name: Github, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/GitHub.webp }
   #- { name: Pixiv, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Pixiv.webp }
   ############ 全国家分组自动选择 ############
@@ -269,7 +272,7 @@ proxy-groups:
   - { name: 🇬🇱格陵兰自动, <<: *u, hidden: true, filter: "(?i)(?:🇬🇱|(?:^|[\\s_-])(GL)(?:(?=$|[\\s_-])|(?:[-_0-9]+(?=$|[\\s_-])))|(?:^|[\\s_-])[-_0-9]*GL(?=$|[\\s_-])|格陵兰|Greenland)" }
   - { name: 🇪🇷厄立特里亚自动, <<: *u, hidden: true, filter: "(?i)(?:🇪🇷|(?:^|[\\s_-])(ER)(?:(?=$|[\\s_-])|(?:[-_0-9]+(?=$|[\\s_-])))|(?:^|[\\s_-])[-_0-9]*ER(?=$|[\\s_-])|厄立特里亚|Eritrea)" }
   - { name: 🇦🇽奥兰群岛自动, <<: *u, hidden: true, filter: "(?i)(?:🇦🇽|(?:^|[\\s_-])(AX)(?:(?=$|[\\s_-])|(?:[-_0-9]+(?=$|[\\s_-])))|(?:^|[\\s_-])[-_0-9]*AX(?=$|[\\s_-])|奥兰|Åland)" }
-  - { name: GLOBAL, type: select, include-all: true, proxies: [ 🚀全球代理, 🟢手动选择, 🟢手动选择2, 🎯全球直连, ♻️自动选择, ⚡️均衡负载, 🔯故障转移, Google, Telegram, Twitter, 哔哩哔哩, YouTube, NETFLIX, Github, microsoft, emby ], icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/GLOBAL.webp }
+  - { name: GLOBAL, type: select, include-all: true, proxies: [ 🚀全球代理, 🟢手动选择, 🟢手动选择2, 🎯全球直连, ♻️自动选择, ⚡️均衡负载, 🔯故障转移, Google, Telegram, Twitter, 哔哩哔哩, YouTube, NETFLIX, Github, microsoft, emby, ai, onedrive, apple ], icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/GLOBAL.webp }
 
 rules:
   - SUB-RULE,(OR,((NETWORK,UDP),(NETWORK,TCP))),SUB-RULES
@@ -277,6 +280,9 @@ rules:
 sub-rules:
   SUB-RULES:
     - RULE-SET,emby_domain,emby
+    - RULE-SET,ai_domain,ai
+    - RULE-SET,onedrive_domain,onedrive
+    - RULE-SET,apple_domain,apple
     - RULE-SET,github_domain,Github
     - RULE-SET,microsoft_domain,microsoft
     - RULE-SET,twitter_domain,Twitter
@@ -326,6 +332,18 @@ rule-providers:
     <<: *domain_mrs
     url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs"
     path: ./ruleset/microsoft_domain.mrs
+  ai_domain:
+    <<: *domain_mrs
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml"
+    path: ./ruleset/ai_domain.yaml  
+  onedrive_domain:
+    <<: *domain_mrs
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml"
+    path: ./ruleset/onedrive_domain.yaml
+  apple_domain:
+    <<: *domain_mrs
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml"
+    path: ./ruleset/apple_domain.yaml  
   emby_domain:
     <<: *domain_mrs
     url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/refs/heads/main/rules/ssd.yaml"
