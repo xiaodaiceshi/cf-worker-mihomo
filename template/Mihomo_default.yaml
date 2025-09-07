@@ -270,7 +270,7 @@ proxy-groups:
   - { name: 🇦🇽奥兰群岛自动, <<: *u, hidden: true, filter: "(?i)(?:🇦🇽|(?:^|[\\s_-])(AX)(?:(?=$|[\\s_-])|(?:[-_0-9]+(?=$|[\\s_-])))|(?:^|[\\s_-])[-_0-9]*AX(?=$|[\\s_-])|奥兰|Åland)" }
   - { name: GLOBAL, type: select, include-all: true, proxies: [ 🚀全球代理, 🟢手动选择, 🟢手动选择2, 🎯全球直连, ♻️自动选择, ⚡️均衡负载, 🔯故障转移, Google, Telegram, Twitter, 哔哩哔哩, YouTube, NETFLIX, Github, microsoft ], icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/GLOBAL.webp }
 
-rules
+rules:
   - SUB-RULE,(OR,((NETWORK,UDP),(NETWORK,TCP))),SUB-RULES
   - MATCH,🚀全球代理
 sub-rules:
