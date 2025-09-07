@@ -17,6 +17,7 @@ proxy-groups:
   - { name: ⚡️均衡负载, <<: *u, strategy: round-robin, type: load-balance }
   - { name: 🔯故障转移, <<: *u, type: fallback }
   - { name: Google, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Google.webp }
+  - { name: emby, <<: *proxy, icon: https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/emby.png }
   - { name: Telegram, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Telegram.webp }
   - { name: Twitter, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Twitter.webp }
   - { name: 哔哩哔哩, <<: *direct, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/BiliBili.webp }
@@ -268,13 +269,14 @@ proxy-groups:
   - { name: 🇬🇱格陵兰自动, <<: *u, hidden: true, filter: "(?i)(?:🇬🇱|(?:^|[\\s_-])(GL)(?:(?=$|[\\s_-])|(?:[-_0-9]+(?=$|[\\s_-])))|(?:^|[\\s_-])[-_0-9]*GL(?=$|[\\s_-])|格陵兰|Greenland)" }
   - { name: 🇪🇷厄立特里亚自动, <<: *u, hidden: true, filter: "(?i)(?:🇪🇷|(?:^|[\\s_-])(ER)(?:(?=$|[\\s_-])|(?:[-_0-9]+(?=$|[\\s_-])))|(?:^|[\\s_-])[-_0-9]*ER(?=$|[\\s_-])|厄立特里亚|Eritrea)" }
   - { name: 🇦🇽奥兰群岛自动, <<: *u, hidden: true, filter: "(?i)(?:🇦🇽|(?:^|[\\s_-])(AX)(?:(?=$|[\\s_-])|(?:[-_0-9]+(?=$|[\\s_-])))|(?:^|[\\s_-])[-_0-9]*AX(?=$|[\\s_-])|奥兰|Åland)" }
-  - { name: GLOBAL, type: select, include-all: true, proxies: [ 🚀全球代理, 🟢手动选择, 🟢手动选择2, 🎯全球直连, ♻️自动选择, ⚡️均衡负载, 🔯故障转移, Google, Telegram, Twitter, 哔哩哔哩, YouTube, NETFLIX, Github, microsoft ], icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/GLOBAL.webp }
+  - { name: GLOBAL, type: select, include-all: true, proxies: [ 🚀全球代理, 🟢手动选择, 🟢手动选择2, 🎯全球直连, ♻️自动选择, ⚡️均衡负载, 🔯故障转移, Google, Telegram, Twitter, 哔哩哔哩, YouTube, NETFLIX, Github, microsoft, emby ], icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/GLOBAL.webp }
 
 rules:
   - SUB-RULE,(OR,((NETWORK,UDP),(NETWORK,TCP))),SUB-RULES
   - MATCH,🚀全球代理
 sub-rules:
   SUB-RULES:
+    - RULE-SET,emby_domain,emby
     - RULE-SET,github_domain,Github
     - RULE-SET,microsoft_domain,microsoft
     - RULE-SET,twitter_domain,Twitter
@@ -312,10 +314,10 @@ rule-providers:
     <<: *ipcidr_mrs
     url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/private.mrs"
     path: ./ruleset/Private_IP.mrs
-  biliintl_domain:
-    <<: *domain_mrs
-    url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/biliintl.mrs"
-    path: ./ruleset/biliintl_domain.mrs
+  #biliintl_domain:
+    #<<: *domain_mrs
+    #url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/biliintl.mrs"
+    #path: ./ruleset/biliintl_domain.mrs
   #ehentai_domain:
     #<<: *domain_mrs
     #url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/ehentai.mrs"
@@ -324,6 +326,10 @@ rule-providers:
     <<: *domain_mrs
     url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs"
     path: ./ruleset/microsoft_domain.mrs
+  emby_domain:
+    <<: *domain_mrs
+    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/refs/heads/main/rules/ssd.yaml"
+    path: ./ruleset/emby_domain.yaml    
   github_domain:
     <<: *domain_mrs
     url: "https://jsd.onmicrosoft.cn/gh/00@meta/geo/geosite/github.mrs"
