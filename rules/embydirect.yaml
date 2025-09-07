@@ -5,8 +5,8 @@ payload:
     - o2.lilyemby.my
     - o3.lilyemby.my
     - jp.lilyemby.my
-		- tx.lilyemby.my
-	  - cc.embycc.link
-	  - cdn.sfcj.org
+	- tx.lilyemby.my
+	- cc.embycc.link
+	- cdn.sfcj.org
     - +.397888.xyz
     - +.ssdhome.pp.ua
