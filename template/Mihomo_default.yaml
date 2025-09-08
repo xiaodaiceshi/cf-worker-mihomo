@@ -332,8 +332,12 @@ rule-providers:
     #path: ./ruleset/ehentai_domain.mrs
   embydirect_domain:
     <<: *domain_mrs
-    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/refs/heads/main/rules/embydirect.mrs"
-    path: ./ruleset/embydirect_domain.mrs  
+    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/refs/heads/main/rules/embydirect.txt"
+    path: ./ruleset/embydirect_domain.txt
+  github_domain:
+    <<: *domain_mrs
+    url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs"
+    path: ./ruleset/github_domain.mrs      
   microsoft_domain:
     <<: *domain_mrs
     url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs"
@@ -352,12 +356,8 @@ rule-providers:
     path: ./ruleset/apple_domain.mrs  
   emby_domain:
     <<: *domain_mrs
-    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/refs/heads/main/rules/ssd.mrs"
-    path: ./ruleset/emby_domain.mrs    
-  github_domain:
-    <<: *domain_mrs
-    url: "https://jsd.onmicrosoft.cn/gh/00@meta/geo/geosite/github.mrs"
-    path: ./ruleset/github_domain.mrs    
+    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/refs/heads/main/rules/ssd.txt"
+    path: ./ruleset/emby_domain.txt    
   twitter_domain:
     <<: *domain_mrs
     url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/twitter.mrs"
