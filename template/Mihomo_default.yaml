@@ -330,10 +330,18 @@ rule-providers:
     #<<: *domain_mrs
     #url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/ehentai.mrs"
     #path: ./ruleset/ehentai_domain.mrs
+  #embydirect_domain:
+    #<<: *domain_mrs
+    #url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embydirect.mrs"
+    #path: ./ruleset/embydirect_domain.mrs
   embydirect_domain:
-    <<: *domain_mrs
-    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embydirect.mrs"
-    path: ./ruleset/embydirect_domain.mrs
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    proxy: 🎯全局直连
+    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embydirect.txt"
+    path: ./ruleset/embydirect_domain.txt
   github_domain:
     <<: *domain_mrs
     url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs"
