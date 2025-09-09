@@ -362,18 +362,18 @@ rule-providers:
     <<: *domain_mrs
     url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.mrs"
     path: ./ruleset/apple_domain.mrs  
-  #emby_domain:
-  #  <<: *domain_mrs
-  #  url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/ssd.mrs"
-  #  path: ./ruleset/emby_domain.mrs
   emby_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: text
-    proxy: emby
-    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/ssd.txt"
-    path: ./ruleset/emby_domain.txt    
+    <<: *domain_mrs
+    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/emby.mrs"
+    path: ./ruleset/emby_domain.mrs
+  #emby_domain:
+  #  type: http
+  #  interval: 86400
+  #  behavior: domain
+  #  format: text
+  #  proxy: emby
+  #  url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/ssd.txt"
+  #  path: ./ruleset/emby_domain.txt    
   twitter_domain:
     <<: *domain_mrs
     url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/twitter.mrs"
