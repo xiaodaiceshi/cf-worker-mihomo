@@ -17,6 +17,7 @@ proxy-groups:
   - { name: ⚡️均衡负载, <<: *u, strategy: round-robin, type: load-balance }
   - { name: 🔯故障转移, <<: *u, type: fallback }
   - { name: Google, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Google.webp }
+  - { name: epic, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Epic.webp }
   - { name: ai, <<: *proxy, icon: https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/ai.png }
   - { name: onedrive, <<: *proxy, icon: https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/onedrive.png }
   - { name: apple, <<: *proxy, icon: https://raw.githubusercontent.com/Kwisma/rules/main/icon/webp/100/Apple.webp }
@@ -283,6 +284,7 @@ sub-rules:
     - RULE-SET,emby_domain,emby
     - RULE-SET,embydirect_domain,embydirect
     - RULE-SET,ai_domain,ai
+    - RULE-SET,epic_domain,epic
     - RULE-SET,onedrive_domain,onedrive
     - RULE-SET,apple_domain,apple
     - RULE-SET,github_domain,Github
@@ -345,7 +347,15 @@ rule-providers:
   github_domain:
     <<: *domain_mrs
     url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs"
-    path: ./ruleset/github_domain.mrs      
+    path: ./ruleset/github_domain.mrs
+  epic_domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    proxy: 🚀全球代理
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Epic/Epic.list"
+    path: ./ruleset/epic_domain.txt      
   microsoft_domain:
     <<: *domain_mrs
     url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs"
