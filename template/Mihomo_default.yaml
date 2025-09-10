@@ -339,7 +339,7 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: text
-    proxy: 🎯全局直连
+    proxy: 🚀全球代理
     url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embydirect.txt"
     path: ./ruleset/embydirect_domain.txt
   github_domain:
@@ -371,7 +371,7 @@ rule-providers:
     interval: 86400
     behavior: domain
     format: text
-    proxy: emby
+    proxy: 🚀全球代理
     url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/ssd.txt"
     path: ./ruleset/emby_domain.txt    
   twitter_domain:
