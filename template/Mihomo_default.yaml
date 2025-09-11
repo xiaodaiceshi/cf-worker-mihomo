@@ -19,6 +19,7 @@ proxy-groups:
   - { name: Google, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Google.webp }
   - { name: WhatsApp, <<: *proxy, icon: https://raw.githubusercontent.com/clash-verge-rev/clash-verge-rev.github.io/refs/heads/main/docs/assets/icons/whatsapp.svg }
   - { name: epic, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Epic.webp }
+  - { name: steam, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Steam.webp }
   - { name: ai, <<: *proxy, icon: https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/ai.png }
   - { name: onedrive, <<: *proxy, icon: https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/onedrive.png }
   - { name: apple, <<: *proxy, icon: https://raw.githubusercontent.com/Kwisma/rules/main/icon/webp/100/Apple.webp }
@@ -286,6 +287,7 @@ sub-rules:
     - RULE-SET,embydirect_domain,embydirect
     - RULE-SET,ai_domain,ai
     - RULE-SET,epic_domain,epic
+    - RULE-SET,steam_domain,steam
     - RULE-SET,onedrive_domain,onedrive
     - RULE-SET,apple_domain,apple
     - RULE-SET,github_domain,Github
@@ -346,6 +348,10 @@ rule-providers:
     proxy: 🚀全球代理
     url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embydirect.txt"
     path: ./ruleset/embydirect_domain.txt
+  steam_domain:
+    <<: *domain_mrs
+    url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam.mrs"
+    path: ./ruleset/steam_domain.mrs  
   github_domain:
     <<: *domain_mrs
     url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs"
