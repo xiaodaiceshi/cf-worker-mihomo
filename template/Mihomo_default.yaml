@@ -17,6 +17,7 @@ proxy-groups:
   - { name: ⚡️均衡负载, <<: *u, strategy: round-robin, type: load-balance }
   - { name: 🔯故障转移, <<: *u, type: fallback }
   - { name: Google, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Google.webp }
+  - { name: WhatsApp, <<: *proxy, icon: https://raw.githubusercontent.com/clash-verge-rev/clash-verge-rev.github.io/refs/heads/main/docs/assets/icons/whatsapp.svg }
   - { name: epic, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Epic.webp }
   - { name: ai, <<: *proxy, icon: https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/ai.png }
   - { name: onedrive, <<: *proxy, icon: https://pub-8feead0908f649a8b94397f152fb9cba.r2.dev/onedrive.png }
@@ -290,6 +291,7 @@ sub-rules:
     - RULE-SET,github_domain,Github
     - RULE-SET,microsoft_domain,microsoft
     - RULE-SET,twitter_domain,Twitter
+    - RULE-SET,WhatsApp_domain,WhatsApp
     - RULE-SET,youtube_domain,YouTube
     - RULE-SET,google_domain,Google
     - RULE-SET,telegram_domain,Telegram
@@ -360,6 +362,14 @@ rule-providers:
     <<: *domain_mrs
     url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs"
     path: ./ruleset/microsoft_domain.mrs
+  WhatsApp_domain:
+    type: http
+    interval: 86400
+    behavior: domain
+    format: text
+    proxy: 🚀全球代理
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Whatsapp/Whatsapp.list"
+    path: ./ruleset/WhatsApp_domain.txt
   ai_domain:
     <<: *domain_mrs
     url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/openai.mrs"
