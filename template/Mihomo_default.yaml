@@ -354,7 +354,7 @@ rule-providers:
     behavior: domain
     format: text
     proxy: 🚀全球代理
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Epic/Epic.list"
+    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/Epic.txt"
     path: ./ruleset/epic_domain.txt      
   microsoft_domain:
     <<: *domain_mrs
