@@ -128,7 +128,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港02-北京时间02:00-09:00
     type: ss
     server: cn01.efan.men
@@ -138,7 +138,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港03-所有节点0.1倍率
     type: ss
     server: cn01.efan.men
@@ -148,7 +148,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港04-备用域名：efanyun1.com
     type: ss
     server: cn01.efan.men
@@ -158,7 +158,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港05-备用域名：efanyun2.com
     type: ss
     server: cn01.efan.men
@@ -168,7 +168,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港06-备用域名：饿饭.cc
     type: ss
     server: cn01.efan.men
@@ -178,7 +178,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港07
     type: ss
     server: cn01.efan.men
@@ -188,7 +188,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港08
     type: ss
     server: cn01.efan.men
@@ -198,7 +198,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港09
     type: ss
     server: cn01.efan.men
@@ -208,7 +208,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港10
     type: ss
     server: cn01.efan.men
@@ -218,7 +218,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港11
     type: ss
     server: cn01.efan.men
@@ -228,7 +228,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港12
     type: ss
     server: cn01.efan.men
@@ -238,7 +238,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港13
     type: ss
     server: cn01.efan.men
@@ -248,7 +248,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港14
     type: ss
     server: cn01.efan.men
@@ -258,7 +258,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港15
     type: ss
     server: cn01.efan.men
@@ -268,7 +268,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港16
     type: ss
     server: cn01.efan.men
@@ -278,7 +278,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港17
     type: ss
     server: cn01.efan.men
@@ -288,7 +288,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港18
     type: ss
     server: cn01.efan.men
@@ -298,7 +298,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港19
     type: ss
     server: cn01.efan.men
@@ -308,7 +308,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 香港20
     type: ss
     server: cn01.efan.men
@@ -318,7 +318,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 新加坡01
     type: ss
     server: cn01.efan.men
@@ -328,7 +328,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 新加坡02
     type: ss
     server: cn01.efan.men
@@ -338,7 +338,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 新加坡03
     type: ss
     server: cn01.efan.men
@@ -348,7 +348,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 新加坡04
     type: ss
     server: cn01.efan.men
@@ -358,7 +358,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 新加坡05
     type: ss
     server: cn01.efan.men
@@ -368,7 +368,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 新加坡06
     type: ss
     server: cn01.efan.men
@@ -378,7 +378,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 新加坡07
     type: ss
     server: cn01.efan.men
@@ -388,7 +388,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 新加坡08
     type: ss
     server: cn01.efan.men
@@ -398,7 +398,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 新加坡09
     type: ss
     server: cn01.efan.men
@@ -408,7 +408,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 新加坡10
     type: ss
     server: cn01.efan.men
@@ -418,7 +418,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 台湾01
     type: ss
     server: cn01.efan.men
@@ -428,7 +428,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 台湾02
     type: ss
     server: cn01.efan.men
@@ -438,7 +438,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 台湾03
     type: ss
     server: cn01.efan.men
@@ -448,7 +448,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 台湾04
     type: ss
     server: cn01.efan.men
@@ -458,7 +458,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 台湾05
     type: ss
     server: cn01.efan.men
@@ -468,7 +468,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 台湾06
     type: ss
     server: cn01.efan.men
@@ -478,7 +478,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 台湾07
     type: ss
     server: cn01.efan.men
@@ -488,7 +488,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 台湾08
     type: ss
     server: cn01.efan.men
@@ -498,7 +498,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 台湾09
     type: ss
     server: cn01.efan.men
@@ -508,7 +508,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 台湾10
     type: ss
     server: cn01.efan.men
@@ -518,7 +518,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 台湾动态ip（每5分钟自动更换ip）
     type: ss
     server: cn01.efan.men
@@ -528,7 +528,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 日本01
     type: ss
     server: cn01.efan.men
@@ -538,7 +538,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 日本02
     type: ss
     server: cn01.efan.men
@@ -548,7 +548,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 日本03
     type: ss
     server: cn01.efan.men
@@ -558,7 +558,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 日本04
     type: ss
     server: cn01.efan.men
@@ -568,7 +568,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 日本05
     type: ss
     server: cn01.efan.men
@@ -578,7 +578,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 日本06
     type: ss
     server: cn01.efan.men
@@ -588,7 +588,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 日本07
     type: ss
     server: cn01.efan.men
@@ -598,7 +598,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 日本08
     type: ss
     server: cn01.efan.men
@@ -608,7 +608,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 日本09
     type: ss
     server: cn01.efan.men
@@ -618,7 +618,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 日本10
     type: ss
     server: cn01.efan.men
@@ -628,7 +628,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 美国01
     type: ss
     server: cn01.efan.men
@@ -638,7 +638,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 美国02
     type: ss
     server: cn01.efan.men
@@ -648,7 +648,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 美国03
     type: ss
     server: cn01.efan.men
@@ -658,7 +658,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 美国04
     type: ss
     server: cn01.efan.men
@@ -668,7 +668,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 美国05
     type: ss
     server: cn01.efan.men
@@ -678,7 +678,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 美国06
     type: ss
     server: cn01.efan.men
@@ -688,7 +688,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 美国07
     type: ss
     server: cn01.efan.men
@@ -698,7 +698,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 美国08
     type: ss
     server: cn01.efan.men
@@ -708,7 +708,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 美国09
     type: ss
     server: cn01.efan.men
@@ -718,7 +718,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 美国10
     type: ss
     server: cn01.efan.men
@@ -728,7 +728,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 韩国01
     type: ss
     server: cn01.efan.men
@@ -738,7 +738,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 韩国02
     type: ss
     server: cn01.efan.men
@@ -748,7 +748,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 马来西亚01
     type: ss
     server: cn01.efan.men
@@ -758,7 +758,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 马来西亚02
     type: ss
     server: cn01.efan.men
@@ -768,7 +768,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 英国01
     type: ss
     server: cn01.efan.men
@@ -778,7 +778,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 英国02
     type: ss
     server: cn01.efan.men
@@ -788,7 +788,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 土耳其01
     type: ss
     server: cn01.efan.men
@@ -798,7 +798,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 土耳其02
     type: ss
     server: cn01.efan.men
@@ -808,7 +808,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 俄罗斯01
     type: ss
     server: cn01.efan.men
@@ -818,7 +818,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 俄罗斯02
     type: ss
     server: cn01.efan.men
@@ -828,7 +828,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 加拿大01
     type: ss
     server: cn01.efan.men
@@ -838,7 +838,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 加拿大02
     type: ss
     server: cn01.efan.men
@@ -848,7 +848,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 法国01
     type: ss
     server: cn01.efan.men
@@ -858,7 +858,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 法国02
     type: ss
     server: cn01.efan.men
@@ -868,7 +868,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 乌克兰01
     type: ss
     server: cn01.efan.men
@@ -878,7 +878,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 乌克兰02
     type: ss
     server: cn01.efan.men
@@ -888,7 +888,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 荷兰01
     type: ss
     server: cn01.efan.men
@@ -898,7 +898,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 荷兰02
     type: ss
     server: cn01.efan.men
@@ -908,7 +908,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 德国01
     type: ss
     server: cn01.efan.men
@@ -918,7 +918,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 德国02
     type: ss
     server: cn01.efan.men
@@ -928,7 +928,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 西班牙01
     type: ss
     server: cn01.efan.men
@@ -938,7 +938,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 西班牙02
     type: ss
     server: cn01.efan.men
@@ -948,7 +948,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 澳大利亚01
     type: ss
     server: cn01.efan.men
@@ -958,7 +958,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 澳大利亚02
     type: ss
     server: cn01.efan.men
@@ -968,7 +968,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 瑞士01
     type: ss
     server: cn01.efan.men
@@ -978,7 +978,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 瑞士02
     type: ss
     server: cn01.efan.men
@@ -988,7 +988,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 希腊01
     type: ss
     server: cn01.efan.men
@@ -998,7 +998,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 希腊02
     type: ss
     server: cn01.efan.men
@@ -1008,7 +1008,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 意大利01
     type: ss
     server: cn01.efan.men
@@ -1018,7 +1018,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 意大利02
     type: ss
     server: cn01.efan.men
@@ -1028,7 +1028,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 比利时01
     type: ss
     server: cn01.efan.men
@@ -1038,7 +1038,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 比利时02
     type: ss
     server: cn01.efan.men
@@ -1048,7 +1048,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 摩尔多瓦01
     type: ss
     server: cn01.efan.men
@@ -1058,7 +1058,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 摩尔多瓦02
     type: ss
     server: cn01.efan.men
@@ -1068,7 +1068,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 罗马尼亚01
     type: ss
     server: cn01.efan.men
@@ -1078,7 +1078,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 罗马尼亚02
     type: ss
     server: cn01.efan.men
@@ -1088,7 +1088,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 冰岛01
     type: ss
     server: cn01.efan.men
@@ -1098,7 +1098,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 冰岛02
     type: ss
     server: cn01.efan.men
@@ -1108,7 +1108,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 捷克01
     type: ss
     server: cn01.efan.men
@@ -1118,7 +1118,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 捷克02
     type: ss
     server: cn01.efan.men
@@ -1128,7 +1128,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 匈牙利01
     type: ss
     server: cn01.efan.men
@@ -1138,7 +1138,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 匈牙利02
     type: ss
     server: cn01.efan.men
@@ -1148,7 +1148,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 芬兰01
     type: ss
     server: cn01.efan.men
@@ -1158,7 +1158,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 芬兰02
     type: ss
     server: cn01.efan.men
@@ -1168,7 +1168,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 葡萄牙01
     type: ss
     server: cn01.efan.men
@@ -1178,7 +1178,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 葡萄牙02
     type: ss
     server: cn01.efan.men
@@ -1188,7 +1188,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 保加利亚01
     type: ss
     server: cn01.efan.men
@@ -1198,7 +1198,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 保加利亚02
     type: ss
     server: cn01.efan.men
@@ -1208,7 +1208,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 波兰01
     type: ss
     server: cn01.efan.men
@@ -1218,7 +1218,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 波兰02
     type: ss
     server: cn01.efan.men
@@ -1228,7 +1228,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 斯洛伐克01
     type: ss
     server: cn01.efan.men
@@ -1238,7 +1238,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 斯洛伐克02
     type: ss
     server: cn01.efan.men
@@ -1248,7 +1248,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 立陶宛01
     type: ss
     server: cn01.efan.men
@@ -1258,7 +1258,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 立陶宛02
     type: ss
     server: cn01.efan.men
@@ -1268,7 +1268,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 爱尔兰01
     type: ss
     server: cn01.efan.men
@@ -1278,7 +1278,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 爱尔兰02
     type: ss
     server: cn01.efan.men
@@ -1288,7 +1288,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 哈萨克斯坦01
     type: ss
     server: cn01.efan.men
@@ -1298,7 +1298,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 哈萨克斯坦02
     type: ss
     server: cn01.efan.men
@@ -1308,7 +1308,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 塞尔维亚01
     type: ss
     server: cn01.efan.men
@@ -1318,7 +1318,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 塞尔维亚02
     type: ss
     server: cn01.efan.men
@@ -1328,7 +1328,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 以色列01
     type: ss
     server: cn01.efan.men
@@ -1338,7 +1338,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 以色列02
     type: ss
     server: cn01.efan.men
@@ -1348,7 +1348,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 巴西01
     type: ss
     server: cn01.efan.men
@@ -1358,7 +1358,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 巴西02
     type: ss
     server: cn01.efan.men
@@ -1368,7 +1368,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 斯洛文尼亚01
     type: ss
     server: cn01.efan.men
@@ -1378,7 +1378,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 斯洛文尼亚02
     type: ss
     server: cn01.efan.men
@@ -1388,7 +1388,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 北马其顿01
     type: ss
     server: cn01.efan.men
@@ -1398,7 +1398,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 北马其顿02
     type: ss
     server: cn01.efan.men
@@ -1408,7 +1408,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 拉脱维亚01
     type: ss
     server: cn01.efan.men
@@ -1418,7 +1418,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 拉脱维亚02
     type: ss
     server: cn01.efan.men
@@ -1428,7 +1428,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 奥地利01
     type: ss
     server: cn01.efan.men
@@ -1438,7 +1438,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
   - name: 奥地利02
     type: ss
     server: cn01.efan.men
@@ -1448,7 +1448,7 @@ proxies:
     plugin: obfs
     plugin-opts:
       mode: http
-      host: https://202509121565513-d3qOpZwqIw.download.microsoft.com
+      host: 202509121565513-d3qOpZwqIw.download.microsoft.com
 proxy-groups:
   - name: 节点选择
     type: select
