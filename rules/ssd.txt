@@ -19,3 +19,4 @@ emby.feiniu.lol
 +.yixia.io
 +.mebimmer.de
 +.ylccloud.top
++.yue.to
