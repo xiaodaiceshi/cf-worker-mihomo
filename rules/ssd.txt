@@ -1,27 +1,28 @@
-# ===== 精确匹配 =====
-full:cf.sfcj.org
-full:cf.lilyemby.my
-full:zoxfree.3767483.xyz
-full:mperformance.mebimmer.de
-full:sport.mebimmer.de
-full:public.shrekmedia.org
-full:emby.feiniu.lol
+# emby domain list (for behavior: domain — clash wildcard format)
 
-# ===== 域名后缀匹配 =====
-suffix:embymv.link
-suffix:5msky.com
-suffix:meowfly.de
-suffix:3767483.xyz
-suffix:embycc.link
-suffix:coemn.com
-suffix:term.wtf
-suffix:emby.wtf
-suffix:vban.xyz
-suffix:kongcheng666.dpdns.org
-suffix:yixia.io
-suffix:mebimmer.de
-suffix:ylccloud.top
-suffix:yue.to
+cf.sfcj.org
+cf.lilyemby.my
+zoxfree.3767483.xyz
+mperformance.mebimmer.de
+sport.mebimmer.de
+public.shrekmedia.org
+emby.feiniu.lol
 
-# ===== 关键词匹配 =====
-keyword:fworks-emby
++.lite.cn2gias.uk
++.embymv.link
++.5msky.com
++.meowfly.de
++.3767483.xyz
++.embycc.link
++.coemn.com
++.term.wtf
++.emby.wtf
++.vban.xyz
++.kongcheng666.dpdns.org
++.yixia.io
++.mebimmer.de
++.ylccloud.top
++.yue.to
+
+# keyword-style match using wildcard (domain-behavior 支持 * 通配)
+*fworks-emby*
