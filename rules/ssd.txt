@@ -25,4 +25,4 @@ emby.feiniu.lol
 +.yue.to
 
 # keyword-style match using wildcard (domain-behavior 支持 * 通配)
-*fworks-emby*
++fworks-emby
