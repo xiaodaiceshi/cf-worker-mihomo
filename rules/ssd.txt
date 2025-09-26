@@ -1,5 +1,3 @@
-# emby domain list (for behavior: domain — clash wildcard format)
-
 cf.sfcj.org
 cf.lilyemby.my
 zoxfree.3767483.xyz
@@ -7,7 +5,6 @@ mperformance.mebimmer.de
 sport.mebimmer.de
 public.shrekmedia.org
 emby.feiniu.lol
-
 +.lite.cn2gias.uk
 +.embymv.link
 +.5msky.com
@@ -23,6 +20,4 @@ emby.feiniu.lol
 +.mebimmer.de
 +.ylccloud.top
 +.yue.to
-
-# keyword-style match using wildcard (domain-behavior 支持 * 通配)
 +fworks-emby
