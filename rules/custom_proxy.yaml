@@ -1,6 +1,8 @@
 payload:
   - 'DOMAIN-SUFFIX,example.com,🟢自定义代理组'  # 示例：example.com 及其子域名走全球代理
   - 'IP-CIDR,155.94.145.17/32,🟢自定义代理组'        # 示例：如果想加 IP 规则
+  - 'DOMAIN-SUFFIX,egylccloud.top,🟢自定义代理组'
+  - 'DOMAIN-SUFFIX,xiaohuolongjc.top,🟢自定义代理组'
   # 可以添加更多规则
   # Speedtest.net
   - 'DOMAIN-SUFFIX,speedtest.net,🟢自定义代理组'
