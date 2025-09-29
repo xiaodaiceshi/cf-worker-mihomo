@@ -304,6 +304,7 @@ sub-rules:
     #- RULE-SET,bahamut_domain,巴哈姆特
     #- RULE-SET,spotify_domain,Spotify
     #- RULE-SET,pixiv_domain,Pixiv
+    - RULE-SET,custom_direct,🎯全球直连
     - RULE-SET,geolocation-!cn,🚀全球代理
     - RULE-SET,google_ip,Google,no-resolve
     - RULE-SET,netflix_ip,NETFLIX,no-resolve
@@ -340,6 +341,13 @@ rule-providers:
     #<<: *domain_mrs
     #url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embydirect.mrs"
     #path: ./ruleset/embydirect_domain.mrs
+  custom_direct:
+    type: http
+    behavior: classical  # 支持混合规则（域名 + IP 等）
+    format: yaml         # 如果用 YAML 格式；如果是 text，可省略或设为 text
+    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/custom_direct.yaml"
+    path: ./ruleset/custom_direct.yaml
+    interval: 86400     # 每天更新一次
   embydirect_domain:
     type: http
     interval: 86400
