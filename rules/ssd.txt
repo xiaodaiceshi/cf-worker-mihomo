@@ -22,3 +22,4 @@ emby.feiniu.lol
 +.yue.to
 +.webn.cc
 +.sylu.net
++.191920.xyz
