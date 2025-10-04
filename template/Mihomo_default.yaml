@@ -18,6 +18,7 @@ proxy-groups:
   - { name: ⚡️均衡负载, <<: *u, strategy: round-robin, type: load-balance }
   - { name: 🔯故障转移, <<: *u, type: fallback }
   - { name: Google, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Google.webp }
+  - { name: cloudflare, <<: *proxy, icon: https://registry.npmmirror.com/@lobehub/icons-static-png/1.68.0/files/dark/cloudflare-color.png }
   - { name: WhatsApp, <<: *proxy, icon: https://raw.githubusercontent.com/clash-verge-rev/clash-verge-rev.github.io/refs/heads/main/docs/assets/icons/whatsapp.svg }
   - { name: epic, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Epic.webp }
   - { name: steam, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Steam.webp }
@@ -286,6 +287,7 @@ sub-rules:
   SUB-RULES:
     - RULE-SET,emby_domain,emby
     - RULE-SET,embydirect_domain,embydirect
+    - RULE-SET,cloudflare,cloudflare   # 新添加的代理规则
     - RULE-SET,custom_proxy,🟢自定义代理组   # 新添加的代理规则
     - RULE-SET,ai_domain,ai
     - RULE-SET,epic_domain,epic
@@ -343,6 +345,13 @@ rule-providers:
     #<<: *domain_mrs
     #url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embydirect.mrs"
     #path: ./ruleset/embydirect_domain.mrs
+  cloudflare:
+    type: http
+    behavior: classical  # 支持域名 + IP 混合
+    format: yaml         # 如果用 YAML；如果是 text，可设为 text 或省略
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Cloudflare/Cloudflare.yaml"
+    path: ./ruleset/cloudflare.yaml
+    interval: 86400     # 每天更新
   custom_proxy:
     type: http
     behavior: classical  # 支持域名 + IP 混合
