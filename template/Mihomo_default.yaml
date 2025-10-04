@@ -288,6 +288,7 @@ sub-rules:
     - RULE-SET,emby_domain,emby
     - RULE-SET,embydirect_domain,embydirect
     - RULE-SET,cloudflare,cloudflare   # 新添加的代理规则
+    - RULE-SET,iptest,🟢自定义代理组   # 新添加的代理规则
     - RULE-SET,custom_proxy,🟢自定义代理组   # 新添加的代理规则
     - RULE-SET,ai_domain,ai
     - RULE-SET,epic_domain,epic
@@ -345,6 +346,13 @@ rule-providers:
     #<<: *domain_mrs
     #url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embydirect.mrs"
     #path: ./ruleset/embydirect_domain.mrs
+  iptest:
+    type: http
+    behavior: classical  # 支持域名 + IP 混合
+    format: yaml         # 如果用 YAML；如果是 text，可设为 text 或省略
+    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/iptest.yaml"
+    path: ./ruleset/iptest.yaml
+    interval: 86400     # 每天更新
   cloudflare:
     type: http
     behavior: classical  # 支持域名 + IP 混合
