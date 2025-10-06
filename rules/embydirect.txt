@@ -11,3 +11,4 @@ cdn.sfcj.org
 +.ssdhome.pp.ua
 +.alipaycctv.cn
 +.saodu.asia
+a.emby.my

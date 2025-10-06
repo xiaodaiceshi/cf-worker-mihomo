@@ -28,3 +28,4 @@ emby.feiniu.lol
 +.carryz.net
 +.liminalnet.com
 +.jingzhe.pro
+emby.my
