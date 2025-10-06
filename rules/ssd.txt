@@ -29,3 +29,4 @@ emby.feiniu.lol
 +.liminalnet.com
 +.jingzhe.pro
 emby.my
+micro.cr18.eu.org
