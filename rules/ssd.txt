@@ -26,3 +26,5 @@ emby.feiniu.lol
 +.xxxxx.com
 +.910427.xyz
 +.carryz.net
++.liminalnet.com
++.jingzhe.pro
