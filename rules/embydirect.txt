@@ -12,3 +12,4 @@ cdn.sfcj.org
 +.alipaycctv.cn
 +.saodu.asia
 a.emby.my
++.handoumedia.top
