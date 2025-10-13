@@ -4,7 +4,8 @@ payload:
   - 'DOMAIN-SUFFIX,egylccloud.top,🟢自定义代理组'
   - 'DOMAIN-SUFFIX,xiaohuolongjc.top,🟢自定义代理组'
   - 'DOMAIN-SUFFIX,talkatone.com,🟢自定义代理组'
-    # 可以添加更多规则
+  - 'DOMAIN-SUFFIX,kad520.uk,🟢自定义代理组'
+  # 可以添加更多规则
   # Speedtest.net
   - 'DOMAIN-SUFFIX,speedtest.net,🟢自定义代理组'
   - 'DOMAIN-SUFFIX,speedtestcustom.com,🟢自定义代理组'
