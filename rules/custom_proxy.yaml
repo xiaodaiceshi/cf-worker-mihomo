@@ -5,6 +5,8 @@ payload:
   - 'DOMAIN-SUFFIX,xiaohuolongjc.top,🟢自定义代理组'
   - 'DOMAIN-SUFFIX,talkatone.com,🟢自定义代理组'
   - 'DOMAIN-SUFFIX,kad520.uk,🟢自定义代理组'
+  - 'DOMAIN-SUFFIX,fanyun.pro,🟢自定义代理组'
+
   # 可以添加更多规则
   # Speedtest.net
   - 'DOMAIN-SUFFIX,speedtest.net,🟢自定义代理组'
