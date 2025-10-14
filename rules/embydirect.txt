@@ -13,3 +13,5 @@ cdn.sfcj.org
 +.saodu.asia
 a.emby.my
 +.handoumedia.top
+us.younoyes.com
+jp.younoyes.com 
