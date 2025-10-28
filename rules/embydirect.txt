@@ -15,3 +15,4 @@ a.emby.my
 +.handoumedia.top
 us.younoyes.com
 jp.younoyes.com 
+144.34.228.198
