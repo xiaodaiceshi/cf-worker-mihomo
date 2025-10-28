@@ -377,10 +377,10 @@ rule-providers:
   embydirect_domain:
     type: http
     interval: 86400
-    behavior: domain
-    format: text
-    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embydirect.txt"
-    path: ./ruleset/embydirect_domain.txt
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embydirect.yaml"
+    path: ./ruleset/embydirect_domain.yaml
   steam_domain:
     <<: *domain_mrs
     url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam.mrs"
