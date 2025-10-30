@@ -12,3 +12,4 @@ payload:
   - 'DOMAIN,a.emby.my,🎯全球直连'
   - 'DOMAIN,cdn.lilyemby.my,🎯全球直连'
   - 'DOMAIN,tx.lilyemby.my,🎯全球直连'
+  - 'DOMAIN-SUFFIX,10520.xyz,🎯全球直连'
