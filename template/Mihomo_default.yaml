@@ -427,9 +427,9 @@ rule-providers:
     type: http
     interval: 86400
     behavior: domain
-    format: text
-    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embyproxy.txt"
-    path: ./ruleset/emby_domain.txt    
+    format: yaml
+    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embyproxy.yaml"
+    path: ./ruleset/emby_domain.yaml    
   twitter_domain:
     <<: *domain_mrs
     url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/twitter.mrs"
