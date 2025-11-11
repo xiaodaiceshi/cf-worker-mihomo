@@ -9,4 +9,4 @@ payload:
   - 'DOMAIN-SUFFIX,oxdtang.top'
   - 'DOMAIN-SUFFIX,quasotech.cc'
   - 'DOMAIN,test-ipv6.com'
-  - 'DOMAIN,ipw.cn'
+  - 'DOMAIN-SUFFIX,ipw.cn'
