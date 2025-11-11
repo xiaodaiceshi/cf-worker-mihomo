@@ -7,6 +7,8 @@ payload:
   - 'DOMAIN-SUFFIX,kad520.uk'
   - 'DOMAIN-SUFFIX,fanyun.pro'
   - 'DOMAIN,test-ipv6.com'
+  - 'DOMAIN-KEYWORD,ipv6'
+
 
   # 可以添加更多规则
   # Speedtest.net
