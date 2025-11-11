@@ -6,6 +6,7 @@ payload:
   - 'DOMAIN-SUFFIX,talkatone.com'
   - 'DOMAIN-SUFFIX,kad520.uk'
   - 'DOMAIN-SUFFIX,fanyun.pro'
+  - 'DOMAIN,test-ipv6.com'
 
   # 可以添加更多规则
   # Speedtest.net
