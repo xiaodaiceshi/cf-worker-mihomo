@@ -6,9 +6,7 @@ payload:
   - 'DOMAIN-SUFFIX,talkatone.com'
   - 'DOMAIN-SUFFIX,kad520.uk'
   - 'DOMAIN-SUFFIX,fanyun.pro'
-  - 'DOMAIN,test-ipv6.com'
-  - 'DOMAIN-KEYWORD,ipv6'
-  - 'DOMAIN-SUFFIX,notion.so'
+  - 'DOMAIN-KEYWORD,notion'
   
 
 
