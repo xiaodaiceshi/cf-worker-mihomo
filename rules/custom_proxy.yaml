@@ -8,6 +8,8 @@ payload:
   - 'DOMAIN-SUFFIX,fanyun.pro'
   - 'DOMAIN,test-ipv6.com'
   - 'DOMAIN-KEYWORD,ipv6'
+  - 'DOMAIN-SUFFIX,notion.so'
+  
 
 
   # 可以添加更多规则
