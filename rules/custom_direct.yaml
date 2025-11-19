@@ -11,3 +11,6 @@ payload:
   - 'DOMAIN-SUFFIX,ipw.cn'
   - 'DOMAIN-KEYWORD,ipv6'
   - 'DOMAIN-KEYWORD,youworld'
+  - 'DOMAIN,wiki.ssdceshi.pp.ua'
+  - 'DOMAIN,fastblog.ssdceshi.pp.ua'
+  - 'DOMAIN,fastlink.ssdceshi.pp.ua'
