@@ -1,0 +1,36 @@
+# embyproxy.list
+# Converted from https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embyproxy.yaml
+# For Quantumult X Rule Policy
+# Updated: 2025-11-20
+
+HOST-SUFFIX,cf.sfcj.org,embyproxy
+HOST-SUFFIX,cf.lilyemby.my,embyproxy
+HOST-SUFFIX,zoxfree.3767483.xyz,embyproxy
+HOST-SUFFIX,mperformance.mebimmer.de,embyproxy
+HOST-SUFFIX,sport.mebimmer.de,embyproxy
+HOST-SUFFIX,public.shrekmedia.org,embyproxy
+HOST-SUFFIX,emby.feiniu.lol,embyproxy
+HOST-SUFFIX,lite.cn2gias.uk,embyproxy
+HOST-SUFFIX,embymv.link,embyproxy
+HOST-SUFFIX,5msky.com,embyproxy
+HOST-SUFFIX,meowfly.de,embyproxy
+HOST-SUFFIX,3767483.xyz,embyproxy
+HOST-SUFFIX,embycc.link,embyproxy
+HOST-SUFFIX,coemn.com,embyproxy
+HOST-SUFFIX,term.wtf,embyproxy
+HOST-SUFFIX,emby.wtf,embyproxy
+HOST-SUFFIX,vban.xyz,embyproxy
+HOST-SUFFIX,kongcheng666.dpdns.org,embyproxy
+HOST-SUFFIX,yixia.io,embyproxy
+HOST-SUFFIX,mebimmer.de,embyproxy
+HOST-SUFFIX,ylccloud.top,embyproxy
+HOST-SUFFIX,yue.to,embyproxy
+HOST-SUFFIX,webn.cc,embyproxy
+HOST-SUFFIX,sylu.net,embyproxy
+HOST-SUFFIX,191920.xyz,embyproxy
+HOST-SUFFIX,xxxxx.com,embyproxy
+HOST-SUFFIX,910427.xyz,embyproxy
+HOST-SUFFIX,carryz.net,embyproxy
+HOST-SUFFIX,liminalnet.com,embyproxy
+HOST-SUFFIX,jingzhe.pro,embyproxy
+HOST-SUFFIX,okemby.org,embyproxy
