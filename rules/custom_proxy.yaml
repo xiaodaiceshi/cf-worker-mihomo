@@ -12,6 +12,8 @@ payload:
   - 'DOMAIN,qdnas.icu'
   - 'DOMAIN,book.hsu.life'
   - 'DOMAIN,book.wenjian.de'
+  - 'DOMAIN-SUFFIX,hutao.netlib.re'
+  
   
 
 
