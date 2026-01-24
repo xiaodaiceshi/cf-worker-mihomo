@@ -14,6 +14,9 @@ payload:
   - 'DOMAIN,book.wenjian.de'
   - 'DOMAIN-SUFFIX,ipip.la'
   - 'DOMAIN-SUFFIX,daihome.pp.ua'
+  - 'DOMAIN,sublink.ssdceshi.pp.ua'
+  - 'DOMAIN,magicsub.ssdceshi.pp.ua'
+  - 'DOMAIN,hutaosub.zeabur.app'
   
 
   
