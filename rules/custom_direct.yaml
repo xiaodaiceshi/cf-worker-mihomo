@@ -18,6 +18,8 @@ payload:
   - 'DOMAIN,fastlink.ssdceshi.pp.ua'
   - 'DOMAIN-SUFFIX,wordpress.com'
   - 'DOMAIN-SUFFIX,gstatic.com'
-  
-  
+  - 'IP-CIDR,155.94.145.17/32'
+  - 'IP-CIDR,140.245.39.151/32'
+  - 'IP-CIDR,140.245.48.164/32'
+  - 'IP-CIDR,140.245.63.81/32'
   
