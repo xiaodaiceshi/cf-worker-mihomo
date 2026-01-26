@@ -16,8 +16,10 @@ payload:
   - 'DOMAIN,sublink.ssdceshi.pp.ua'
   - 'DOMAIN,magicsub.ssdceshi.pp.ua'
   - 'DOMAIN,hutaosub.zeabur.app'
-  
-
+  - 'IP-CIDR,155.94.145.17/32'
+  - 'IP-CIDR,140.245.39.151/32'
+  - 'IP-CIDR,140.245.48.164/32'
+  - 'IP-CIDR,140.245.63.81/32'
   
   
 
