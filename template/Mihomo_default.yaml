@@ -286,8 +286,8 @@ rules:
   - MATCH,🚀全球代理
 sub-rules:
   SUB-RULES:
-    - RULE-SET,custom_direct,🎯全球直连
-    - RULE-SET,custom_proxy,🟢自定义代理组   # 新添加的代理规则
+    - RULE-SET,custom_direct,🎯全球直连,no-resolve
+    - RULE-SET,custom_proxy,🟢自定义代理组,no-resolve   # 新添加的代理规则
     - RULE-SET,emby_domain,emby
     - RULE-SET,embydirect_domain,embydirect
     - RULE-SET,iptest,🟢自定义代理组   # 新添加的代理规则
