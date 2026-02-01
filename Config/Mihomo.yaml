@@ -16,6 +16,9 @@ proxy: &proxy { type: select, include-all: true, proxies: [🚀全球代理, �
 direct: &direct { type: select, include-all: true, proxies: [🎯全球直连, 🚀全球代理, ♻️自动选择, ⚡️均衡负载, 🔯故障转移, 🇭🇰香港自动, 🇯🇵日本自动, 🇺🇸美国自动, 🇸🇬新加坡自动] }
 ipcidr_mrs: &ipcidr_mrs { type: http, interval: 86400, behavior: ipcidr, format: mrs, proxy: 🎯全球直连 }
 domain_mrs: &domain_mrs { type: http, interval: 86400, behavior: domain, format: mrs, proxy: 🎯全球直连 }
+default_dns: &default_dns [ '119.29.29.29', '119.28.28.28', '182.254.116.116', '182.254.118.118', '223.5.5.5', '223.6.6.6', '114.114.114.114', '114.114.115.115', '180.76.76.76', '1.2.4.8', '210.2.4.8', '101.226.4.6', '218.30.118.6', '123.125.81.6', '140.207.198.6', '1.1.8.8', '1.1.8.9', '180.184.1.1', '180.184.2.2', '[2400:3200::1]', '[2400:3200:baba::1]', '[2402:4e00::]', '[2402:4e00:1::]', 'system' ]
+direct_dns: &direct_dns [ '119.29.29.29', '119.28.28.28', '182.254.116.116', '182.254.118.118', '223.5.5.5', '223.6.6.6', '114.114.114.114', '114.114.115.115', '180.76.76.76', '1.2.4.8', '210.2.4.8', '101.226.4.6', '218.30.118.6', '123.125.81.6', '140.207.198.6', '1.1.8.8', '1.1.8.9', '180.184.1.1', '180.184.2.2', '[2400:3200::1]', '[2400:3200:baba::1]', '[2402:4e00::]', '[2402:4e00:1::]' ]
+proxy_dns: &proxy_dns [ '8.8.8.8', '8.8.4.4', '1.1.1.1', '1.0.0.1', '9.9.9.9', '149.112.112.112', '208.67.222.222', '208.67.220.220', '4.2.2.1', '4.2.2.2', '168.126.63.1','168.126.63.2', '37.235.1.174', '37.235.1.177', '216.146.35.35', '216.146.36.36', '8.26.56.26', '8.20.247.20', '64.6.64.6', '64.6.65.6', '77.88.8.8', '77.88.8.1', '80.80.80.80', '80.80.81.81', '156.154.70.1', '156.154.71.1', '156.154.70.5', '156.154.71.5', '103.197.104.178', '103.197.106.75', '203.189.136.148', '203.112.2.4', '84.200.69.80', '84.200.70.40', '195.46.39.39', '195.46.39.40', '109.69.8.51', '91.239.100.100', '89.233.43.71', '81.218.119.11', '209.88.198.133', '185.222.222.222', '45.11.45.11', '74.82.42.42', '66.220.18.42', '104.236.210.29', '45.55.155.25', '202.79.32.33', '202.79.32.34', '[2001:4860:4860::8888]', '[2001:4860:4860::8844]', '[2606:4700:4700::1111]', '[2606:4700:4700::1001]' ]
 # 延迟检测 URL
 p: &p
   type: http
@@ -149,7 +152,6 @@ external-ui-url: "https://ghfast.top/github.com/Zephyruso/zashboard/releases/lat
 external-doh-server: /dns-query # 外部 DoH 服务器
 #interface-name:  # 使用的网络接口名称
 #routing-mark:  # 路由标记
-global-client-fingerprint: chrome # 全局客户端指纹为 Chrome
 
 # 缓解移动设备耗电问题
 # https://github.com/vernesong/OpenClash/issues/2614
@@ -245,43 +247,31 @@ dns:
   respect-rules: false # dns 连接遵守路由规则，需配置 proxy-server-nameserver, 强烈不建议和 prefer-h3 一起使用, 与遵守 nameserver-policy 冲突 
   listen: 0.0.0.0:1053 # 本地 DNS 监听端口，默认是 1053 端口
   ipv6: true # 启用 IPv6 DNS 解析，避免 IPv6 地址的解析请求
-  default-nameserver: # 不推荐使用 system 
-    - 223.5.5.5
-    - system
+  default-nameserver:
+    *default_dns
   enhanced-mode: fake-ip # 启用增强模式 redir-host or fake-ip
   fake-ip-range: 198.18.0.1/16 # fake-ip 池设置
-  fake-ip-filter-mode: blacklist
+  fake-ip-filter-mode: rule
   fake-ip-filter:
-    - RULE-SET:private_domain,fakeip_filter_domain,cn_domain
-    - dns.alidns.com
-    - cloudflare-dns.com
-    - dns.google
-    - dns.adguard-dns.com
-    - dns.nextdns.io
-    - public.dns.iij.jp
-    - dns0.eu
-    - dns.18bit.cn
-    - 2025.dns1.top
-    - dns.ipv4dns.com
+    - RULE-SET,private_domain,real-ip
+    - RULE-SET,dns_domain,real-ip
+    - RULE-SET,cn_domain,real-ip
+    - RULE-SET,fakeip_filter_domain,real-ip
+    - RULE-SET,tracker_domain,real-ip
+    - MATCH,fake-ip
   nameserver-policy:
-    "+.jp":
-      - "https://public.dns.iij.jp/dns-query#h3=true" # IIJ （日本） DNS over H3
-    "+.hk":
-      - "quic://dns.nextdns.io" # NextDNS（香港） DNS over DOQ
-    "+.eu":
-      - "quic://dns0.eu" # 公共（欧洲） DNS over DOQ
     "RULE-SET:private_domain,cn_domain":
-      - "quic://dns.18bit.cn" # 18bit DNS over DOQ
-      - "quic://dns.ipv4dns.com" # 清新云 DNS over DOQ
-      - "quic://2025.dns1.top" # 关圣 DNS over DOQ
-      # - "quic://dns.alidns.com" # 阿里 DNS over DOQ
-  nameserver: # Google dns在 api 面板中无法 DNS 查询，已删除
-    - "quic://dns.adguard-dns.com" # AdGuard DNS over DOQ
-    # - "https://cloudflare-dns.com/dns-query#h3=true" # Cloudflare DNS over H3
+      - "quic://dns.alidns.com" # 阿里 DNS over DOQ
+      - "https://doh.pub/dns-query" # 腾讯 DNS DOH
+  nameserver: # 不能使用国内dns和被墙的dns
+    - "https://cloudflare-dns.com/dns-query#h3=true" # Cloudflare DNS over H3
+    - "https://doh.opendns.com/dns-query" # Open DNS over DOH
   proxy-server-nameserver: # 代理节点域名解析服务器，仅用于解析代理节点的域名，不能使用 system，不能设置 ecs
     - "quic://dns.alidns.com" # 阿里 DNS over DOQ
+    - "https://doh.pub/dns-query" # 腾讯 DNS DOH
   direct-nameserver: #  用于直连出口域名解析的 DNS 服务器，不能使用 system，不能设置 ecs
     - "quic://dns.alidns.com" # 阿里 DNS over DOQ
+    - "https://doh.pub/dns-query" # 腾讯 DNS DOH
   direct-nameserver-follow-policy: true # 是否遵循 nameserver-policy，默认为不遵守，仅当 direct-nameserver 不为空时生效
 
 proxy-groups:
@@ -1440,3 +1430,8 @@ rule-providers:
     <<: *domain_mrs
     url: "https://jsd.onmicrosoft.cn/gh/DustinWin/ruleset_geodata@mihomo-ruleset/fakeip-filter.mrs"
     path: ./ruleset/Fakeip_Filter_Domain.mrs
+
+  dns_domain:
+    <<: *domain_mrs
+    url: "https://jsd.onmicrosoft.cn/gh/peiyingyao/Rule-for-OCD@master/rule/Clash/DNS/DNS_OCD_Domain.mrs"
+    path: ./ruleset/DNS_Domain.mrs
