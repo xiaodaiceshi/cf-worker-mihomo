@@ -164,8 +164,8 @@ export function configs(mihomo = '', singbox = '') {
                         value: 'https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/Mihomo_default_full_NoAds.yaml',
                     },
                     {
-                        label: '胡桃增强版 (全面地理路由) (与Github同步) ',
-                        value: 'https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/template/Mihomo_hutao_enhanced.yaml',
+                        label: 'shushu自用版 (与Github同步) ',
+                        value: 'https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/template/Mihomo_shushu_enhanced.yaml',
                     },
                 ],
             },
