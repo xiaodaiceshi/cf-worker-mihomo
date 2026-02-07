@@ -163,6 +163,10 @@ export function configs(mihomo = '', singbox = '') {
                         label: '默认(全分组) (无去广告) (与Github同步) ',
                         value: 'https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/Mihomo_default_full_NoAds.yaml',
                     },
+                    {
+                        label: '胡桃增强版 (全面地理路由) (与Github同步) ',
+                        value: 'https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/template/Mihomo_hutao_enhanced.yaml',
+                    },
                 ],
             },
             {
