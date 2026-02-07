@@ -1,20 +1,51 @@
+# ==========================================
+# 自定义直连规则配置文件
+# 优化时间: 2026-02-07
+# ==========================================
+
 payload:
-  - 'IP-CIDR,115.190.128.214/32'
-  - 'DOMAIN-SUFFIX,yunray.ai'
-  - 'DOMAIN-SUFFIX,wanmeiwl3.xyz'
-  - 'DOMAIN-SUFFIX,wanmeiwl1.xyz'
-  - 'DOMAIN-SUFFIX,wanmeiwl4.xyz'
-  - 'DOMAIN-SUFFIX,bpjc.pics'
-  - 'DOMAIN-SUFFIX,18934569.xyz'
-  - 'DOMAIN-SUFFIX,oxdtang.top'
-  - 'DOMAIN-SUFFIX,quasotech.cc'
-  - 'DOMAIN-SUFFIX,ipw.cn'
-  - 'DOMAIN-KEYWORD,ipv6'
-  - 'DOMAIN-KEYWORD,youworld'
-  - 'DOMAIN,wiki.ssdceshi.pp.ua'
-  - 'DOMAIN,fastblog.ssdceshi.pp.ua'
-  - 'DOMAIN,fastlink.ssdceshi.pp.ua'
-  - 'DOMAIN-KEYWORD,fnnas'
-  - 'DOMAIN,fastlink.ssdceshi.pp.ua'
-  - 'DOMAIN-SUFFIX,wordpress.com'
-  - 'DOMAIN-SUFFIX,gstatic.com'
+  # ----------------------------------------
+  # 精确IP地址直连规则
+  # ----------------------------------------
+  - 'IP-CIDR,115.190.128.214/32'  # 特定服务器IP直连
+
+  # ----------------------------------------
+  # IPv6相关服务直连 (关键词匹配)
+  # ----------------------------------------
+  - 'DOMAIN-KEYWORD,ipv6'        # 所有包含ipv6关键词的域名
+  
+  # ----------------------------------------
+  # NAS及存储服务直连 (关键词匹配)
+  # ----------------------------------------
+  - 'DOMAIN-KEYWORD,fnnas'       # NAS相关服务
+  - 'DOMAIN-KEYWORD,youworld'    # youworld相关服务
+
+  # ----------------------------------------
+  # 精确域名直连规则
+  # ----------------------------------------
+  - 'DOMAIN,wiki.ssdceshi.pp.ua'      # Wiki服务
+  - 'DOMAIN,fastblog.ssdceshi.pp.ua'  # 博客服务
+  - 'DOMAIN,fastlink.ssdceshi.pp.ua'  # 链接服务
+
+  # ----------------------------------------
+  # 国内常用服务直连 (域名后缀匹配)
+  # ----------------------------------------
+  - 'DOMAIN-SUFFIX,ipw.cn'       # IP查询服务
+  - 'DOMAIN-SUFFIX,quasotech.cc' # 技术服务
+  - 'DOMAIN-SUFFIX,oxdtang.top'  # 个人服务
+  - 'DOMAIN-SUFFIX,bpjc.pics'    # 图片服务
+  - 'DOMAIN-SUFFIX,18934569.xyz' # 数字域名服务
+  - 'DOMAIN-SUFFIX,yunray.ai'    # AI服务
+
+  # ----------------------------------------
+  # 完美世界相关服务直连
+  # ----------------------------------------
+  - 'DOMAIN-SUFFIX,wanmeiwl1.xyz'  # 完美世界服务1
+  - 'DOMAIN-SUFFIX,wanmeiwl3.xyz'  # 完美世界服务3
+  - 'DOMAIN-SUFFIX,wanmeiwl4.xyz'  # 完美世界服务4
+
+  # ----------------------------------------
+  # 国际知名服务直连
+  # ----------------------------------------
+  - 'DOMAIN-SUFFIX,wordpress.com'  # WordPress博客平台
+  - 'DOMAIN-SUFFIX,gstatic.com'    # Google静态资源

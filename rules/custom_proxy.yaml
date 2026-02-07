@@ -1,132 +1,164 @@
+# ==========================================
+# 自定义代理规则配置文件
+# 优化时间: 2026-02-07
+# ==========================================
+
 payload:
+  # ----------------------------------------
+  # 示例和测试规则
+  # ----------------------------------------
   - 'DOMAIN-SUFFIX,example.com'  # 示例：example.com 及其子域名走全球代理
-  - 'DOMAIN-SUFFIX,egylccloud.top'
-  - 'DOMAIN-SUFFIX,xiaohuolongjc.top'
-  - 'DOMAIN-SUFFIX,talkatone.com'
-  - 'DOMAIN-SUFFIX,kad520.uk'
-  - 'DOMAIN-SUFFIX,fanyun.pro'
-  - 'DOMAIN-KEYWORD,notion'
-  - 'DOMAIN,store.luxrealm.online'
-  - 'DOMAIN,qdnas.icu'
-  - 'DOMAIN,qdnas.icu'
-  - 'DOMAIN,book.hsu.life'
-  - 'DOMAIN,book.wenjian.de'
-  - 'DOMAIN-SUFFIX,ipip.la'
-  - 'DOMAIN-SUFFIX,daihome.pp.ua'
-  - 'DOMAIN,sublink.ssdceshi.pp.ua'
-  - 'DOMAIN,magicsub.ssdceshi.pp.ua'
-  - 'DOMAIN,hutaosub.zeabur.app'
-  - 'IP-CIDR,155.94.145.17/32'
-  - 'IP-CIDR,140.245.39.151/32'
-  - 'IP-CIDR,140.245.48.164/32'
-  - 'IP-CIDR,140.245.63.81/32'
-  - 'DOMAIN,gousen.cc.cd'
-  - 'DOMAIN-SUFFIX,codebuddy.ai'
 
+  # ----------------------------------------
+  # 云服务和存储平台
+  # ----------------------------------------
+  - 'DOMAIN-SUFFIX,egylccloud.top'      # EGYL云服务
+  - 'DOMAIN-SUFFIX,xiaohuolongjc.top'   # 小火龙云存储
+  - 'DOMAIN-SUFFIX,fanyun.pro'          # 翻云服务
+  - 'DOMAIN,store.luxrealm.online'      # LuxRealm商店
+  - 'DOMAIN,qdnas.icu'                  # QD NAS服务
+  - 'DOMAIN-SUFFIX,daihome.pp.ua'       # DaiHome服务
+  - 'DOMAIN,sublink.ssdceshi.pp.ua'     # 订阅链接服务
+  - 'DOMAIN,magicsub.ssdceshi.pp.ua'    # Magic订阅服务
+  - 'DOMAIN,hutaosub.zeabur.app'        # 胡桃订阅服务
+
+  # ----------------------------------------
+  # 通讯和社交服务
+  # ----------------------------------------
+  - 'DOMAIN-SUFFIX,talkatone.com'       # Talkatone通话服务
+  - 'DOMAIN-SUFFIX,kad520.uk'           # KAD服务
+  - 'DOMAIN-KEYWORD,notion'             # Notion相关服务
+  - 'DOMAIN,gousen.cc.cd'               # Gousen服务
+
+  # ----------------------------------------
+  # 在线工具和服务
+  # ----------------------------------------
+  - 'DOMAIN,book.hsu.life'              # Hsu Life书籍服务
+  - 'DOMAIN,book.wenjian.de'            # Wenjian书籍服务
+  - 'DOMAIN-SUFFIX,ipip.la'             # IPIP网络工具
+  - 'DOMAIN-SUFFIX,codebuddy.ai'        # CodeBuddy AI编程助手
+
+  # ----------------------------------------
+  # 网络测速服务 (按提供商分组)
+  # ----------------------------------------
   
-  
-
-
-  # 可以添加更多规则
-  # Speedtest.net
+  # Ookla Speedtest系列
   - 'DOMAIN-SUFFIX,speedtest.net'
   - 'DOMAIN-SUFFIX,speedtestcustom.com'
   - 'DOMAIN-SUFFIX,ooklaserver.net'
-  - 'DOMAIN-SUFFIX,speed.misaka.one'
-  - 'DOMAIN-SUFFIX,speedtest.rt.ru'
-  - 'DOMAIN-SUFFIX,speedtest.aptg.com.tw'
-  - 'DOMAIN-SUFFIX,speedtest.gslnetworks.com'
-  - 'DOMAIN-SUFFIX,speedtest.jsinfo.net'
-  - 'DOMAIN-SUFFIX,speedtest.i3d.net'
-  - 'DOMAIN-SUFFIX,speedtest.telus.com'
-  - 'DOMAIN-SUFFIX,speedtest.telstra.net'
-  - 'DOMAIN-SUFFIX,speedtest.clouvider.net'
-  - 'DOMAIN-SUFFIX,speedtest.idv.tw'
-  - 'DOMAIN-SUFFIX,speedtest.frontier.com'
-  - 'DOMAIN-SUFFIX,speedtest.orange.fr'
-  - 'DOMAIN-SUFFIX,speedtest.centurylink.net'
-  - 'DOMAIN-SUFFIX,srvr.bell.ca'
-  - 'DOMAIN-SUFFIX,speedtest.contabo.net'
-  - 'DOMAIN-SUFFIX,speedtest.hk.chinamobile.com'
-  - 'DOMAIN-SUFFIX,speedtestbb.hk.chinamobile.com'
-  - 'DOMAIN-SUFFIX,hizinitestet.com'
-  - 'DOMAIN-SUFFIX,linknetspeedtest.net.br'
-  - 'DOMAIN-SUFFIX,speedtest.rit.edu'
-  - 'DOMAIN-SUFFIX,speedtest.ropa.de'
-  - 'DOMAIN-SUFFIX,speedtest.sits.su'
-  - 'DOMAIN-SUFFIX,speedtest.tigo.cr'
-  - 'DOMAIN-SUFFIX,speedtest.pni.tw'
-  - 'DOMAIN-SUFFIX,speed.pfm.gg'
-  - 'DOMAIN-SUFFIX,speedtest.faelix.net'
-  - 'DOMAIN-SUFFIX,speedtest.labixe.net'
-  - 'DOMAIN-SUFFIX,speedtest.warian.net'
-  - 'DOMAIN-SUFFIX,speedtest.starhub.com'
-  - 'DOMAIN-SUFFIX,speedtest.gibir.net.tr'
-  - 'DOMAIN-SUFFIX,speedtest.ozarksgo.net'
-  - 'DOMAIN-SUFFIX,speedtest.exetel.com.au'
-  - 'DOMAIN-SUFFIX,speedtest.sbcglobal.net'
-  - 'DOMAIN-SUFFIX,speedtest.leaptel.com.au'
-  - 'DOMAIN-SUFFIX,speedtest.windstream.net'
-  - 'DOMAIN-SUFFIX,speedtest.vodafone.com.au'
-  - 'DOMAIN-SUFFIX,speedtest.rascom.ru'
-  - 'DOMAIN-SUFFIX,speedtest.dchost.com'
-  - 'DOMAIN-SUFFIX,speedtest.highnet.com'
-  - 'DOMAIN-SUFFIX,speedtest.seattle.wa.limewave.net'
-  - 'DOMAIN-SUFFIX,speedtest.optitel.com.au'
-  - 'DOMAIN-SUFFIX,speednet.net.tr'
-  - 'DOMAIN-SUFFIX,speedtest.angolacables.co.ao'
   - 'DOMAIN-SUFFIX,ookla-speedtest.fsr.com'
-  - 'DOMAIN-SUFFIX,speedtest.comnet.com.tr'
-  - 'DOMAIN-SUFFIX,speedtest.gslnetworks.com.au'
-  - 'DOMAIN-SUFFIX,test.gslnetworks.com.au'
-  - 'DOMAIN-SUFFIX,speedtestunonet.com.br'
-  - 'DOMAIN-SUFFIX,speedtest.alagas.net'
-  - 'DOMAIN-SUFFIX,speedtest.surfshark.com'
-  - 'DOMAIN-SUFFIX,speedtest.aarnet.net.au'
   - 'DOMAIN-SUFFIX,ookla.rcp.net'
   - 'DOMAIN-SUFFIX,ookla-speedtests.e2ro.com'
-  - 'DOMAIN-SUFFIX,speedtest.com.sg'
   - 'DOMAIN-SUFFIX,ookla.ddnsgeek.com'
-  - 'DOMAIN-SUFFIX,speedtest.cmcnetworks.net'
-  - 'DOMAIN-SUFFIX,speedtest.moack.co.kr'
-  - 'DOMAIN-SUFFIX,speedtest.mtnetworks.mn'
-  - 'DOMAIN-SUFFIX,speedtest.waicore.com'
-  - 'DOMAIN-SUFFIX,speedtest.love'
-  - 'DOMAIN-SUFFIX,speedtest.6667890.xyz'
-  - 'DOMAIN-SUFFIX,speedtest.kansuiun.com'
-  - 'DOMAIN-SUFFIX,speedtest.tjokas.com'
-  - 'DOMAIN-SUFFIX,speedtest.timeweb.ru'
-  - 'DOMAIN-SUFFIX,speedtest.vianet.ca'
-  - 'DOMAIN-SUFFIX,speedtest.vipnetconexao.com.br'
-  # Cloudflare
-  - 'DOMAIN-SUFFIX,speed.cloudflare.com'
-  # Wi-Fi Man
-  - 'DOMAIN-SUFFIX,wifiman.com'
-  - 'DOMAIN-SUFFIX,wifiman.me'
-  - 'DOMAIN-SUFFIX,wifiman.ubncloud.com'
-  - 'DOMAIN-SUFFIX,wifiman-stability-test.ubncloud.com'
-  # Fast.com
-  - 'DOMAIN-SUFFIX,fast.com'
-  # MacPaw
-  - 'DOMAIN-SUFFIX,speedtest.macpaw.com'
-  # speedtestmaster
-  - 'DOMAIN-SUFFIX,netspeedtestmaster.com'
-  # Google Search Result of "speedtest", powered by this
-  - 'DOMAIN-SUFFIX,measurement-lab.org'
-  - 'DOMAIN-SUFFIX,measurementlab.net'
-  # Google Fiber legacy speedtest site (new fiber speedtest use speedtestcustom.com)
-  - 'DOMAIN-SUFFIX,speed.googlefiber.net'
-  # librespeed
-  - 'DOMAIN-SUFFIX,backend.librespeed.org'
-  # Apple (From netQuality command)
-  - 'DOMAIN-SUFFIX,mensura.cdn-apple.com'
-  # OpenSpeedtest (This is also used for openspeedtest server download)
-  - 'DOMAIN-SUFFIX,open.cachefly.net'
-  # Linode
-  - 'DOMAIN-SUFFIX,speedtest.linode.com'
-  # www.bandwidthplace.com
-  - 'DOMAIN-SUFFIX,mlab-oti.measurement-lab.org'
-  # nperf
-  - 'DOMAIN-SUFFIX,nperf.net'
-  # HiNet
-  - 'DOMAIN-SUFFIX,speed.hinet.net'
+  
+  # 各地区运营商测速
+  - 'DOMAIN-SUFFIX,speedtest.aptg.com.tw'        # 台湾APTG
+  - 'DOMAIN-SUFFIX,speedtest.hk.chinamobile.com' # 香港移动
+  - 'DOMAIN-SUFFIX,speedtestbb.hk.chinamobile.com' # 香港移动宽带
+  - 'DOMAIN-SUFFIX,speedtest.telus.com'          # 加拿大Telus
+  - 'DOMAIN-SUFFIX,speedtest.telstra.net'        # 澳洲Telstra
+  - 'DOMAIN-SUFFIX,speedtest.orange.fr'          # 法国Orange
+  - 'DOMAIN-SUFFIX,speedtest.centurylink.net'    # 美国CenturyLink
+  - 'DOMAIN-SUFFIX,speedtest.vodafone.com.au'    # 澳洲Vodafone
+  - 'DOMAIN-SUFFIX,speedtest.com.sg'             # 新加坡测速
+  - 'DOMAIN-SUFFIX,speedtest.timeweb.ru'         # 俄罗斯TimeWeb
+  
+  # 国际网络服务商测速
+  - 'DOMAIN-SUFFIX,speedtest.gslnetworks.com'    # GSL Networks
+  - 'DOMAIN-SUFFIX,speedtest.clouvider.net'      # Clouvider
+  - 'DOMAIN-SUFFIX,speedtest.contabo.net'        # Contabo
+  - 'DOMAIN-SUFFIX,speedtest.surfshark.com'      # Surfshark VPN
+  - 'DOMAIN-SUFFIX,speedtest.aarnet.net.au'      # 澳洲学术网
+  - 'DOMAIN-SUFFIX,speedtest.cmcnetworks.net'    # CMC Networks
+  - 'DOMAIN-SUFFIX,speedtest.moack.co.kr'        # 韩国Moack
+  - 'DOMAIN-SUFFIX,speedtest.mtnetworks.mn'      # 蒙古MT Networks
+  
+  # 教育机构测速
+  - 'DOMAIN-SUFFIX,speedtest.rit.edu'            # 罗切斯特理工学院
+  - 'DOMAIN-SUFFIX,mlab-oti.measurement-lab.org' # Measurement Lab
+  
+  # 其他专业测速服务
+  - 'DOMAIN-SUFFIX,speed.misaka.one'             # Misaka网络
+  - 'DOMAIN-SUFFIX,speedtest.rt.ru'              # RT网络
+  - 'DOMAIN-SUFFIX,speedtest.jsinfo.net'         # JS Info
+  - 'DOMAIN-SUFFIX,speedtest.i3d.net'            # i3D网络
+  - 'DOMAIN-SUFFIX,speedtest.idv.tw'             # 台湾IDV
+  - 'DOMAIN-SUFFIX,speedtest.frontier.com'       # Frontier通信
+  - 'DOMAIN-SUFFIX,srvr.bell.ca'                 # Bell加拿大
+  - 'DOMAIN-SUFFIX,hizinitestet.com'             # 土耳其测速
+  - 'DOMAIN-SUFFIX,linknetspeedtest.net.br'      # 巴西LinkNet
+  - 'DOMAIN-SUFFIX,speedtest.ropa.de'            # 德国Ropa
+  - 'DOMAIN-SUFFIX,speedtest.sits.su'            # SITS网络
+  - 'DOMAIN-SUFFIX,speedtest.tigo.cr'            # 哥斯达黎加Tigo
+  - 'DOMAIN-SUFFIX,speedtest.pni.tw'             # 台湾PNI
+  - 'DOMAIN-SUFFIX,speed.pfm.gg'                 # PFM测速
+  - 'DOMAIN-SUFFIX,speedtest.faelix.net'         # Faelix网络
+  - 'DOMAIN-SUFFIX,speedtest.labixe.net'         # Labixe网络
+  - 'DOMAIN-SUFFIX,speedtest.warian.net'         # Warian网络
+  - 'DOMAIN-SUFFIX,speedtest.starhub.com'        # 新加坡StarHub
+  - 'DOMAIN-SUFFIX,speedtest.gibir.net.tr'       # 土耳其Gibir
+  - 'DOMAIN-SUFFIX,speedtest.ozarksgo.net'       # Ozarks Go
+  - 'DOMAIN-SUFFIX,speedtest.exetel.com.au'      # 澳洲Exetel
+  - 'DOMAIN-SUFFIX,speedtest.sbcglobal.net'      # AT&T SBC
+  - 'DOMAIN-SUFFIX,speedtest.leaptel.com.au'     # 澳洲LeapTel
+  - 'DOMAIN-SUFFIX,speedtest.windstream.net'     # Windstream网络
+  - 'DOMAIN-SUFFIX,speedtest.rascom.ru'          # 俄罗斯RASCOM
+  - 'DOMAIN-SUFFIX,speedtest.dchost.com'         # DCHost主机
+  - 'DOMAIN-SUFFIX,speedtest.highnet.com'        # HighNet网络
+  - 'DOMAIN-SUFFIX,speedtest.seattle.wa.limewave.net' # 西雅图LimeWave
+  - 'DOMAIN-SUFFIX,speedtest.optitel.com.au'     # 澳洲OptiTel
+  - 'DOMAIN-SUFFIX,speednet.net.tr'              # 土耳其SpeedNet
+  - 'DOMAIN-SUFFIX,speedtest.angolacables.co.ao' # 安哥拉电缆
+  - 'DOMAIN-SUFFIX,speedtest.comnet.com.tr'      # 土耳其ComNet
+  - 'DOMAIN-SUFFIX,speedtest.gslnetworks.com.au' # 澳洲GSL网络
+  - 'DOMAIN-SUFFIX,test.gslnetworks.com.au'      # GSL测试
+  - 'DOMAIN-SUFFIX,speedtestunonet.com.br'       # 巴西Unonet
+  - 'DOMAIN-SUFFIX,speedtest.alagas.net'          # Alagas网络
+  - 'DOMAIN-SUFFIX,speedtest.waicore.com'        # WaiCore网络
+  - 'DOMAIN-SUFFIX,speedtest.love'               # Love测速
+  - 'DOMAIN-SUFFIX,speedtest.6667890.xyz'        # 数字测速
+  - 'DOMAIN-SUFFIX,speedtest.kansuiun.com'       # Kansuiun测速
+  - 'DOMAIN-SUFFIX,speedtest.tjokas.com'         # Tjokas测速
+  - 'DOMAIN-SUFFIX,speedtest.vianet.ca'          # 加拿大Vianet
+  - 'DOMAIN-SUFFIX,speedtest.vipnetconexao.com.br' # 巴西VIPNet
+
+  # ----------------------------------------
+  # CDN和基础设施服务
+  # ----------------------------------------
+  - 'DOMAIN-SUFFIX,speed.cloudflare.com'         # Cloudflare测速
+  - 'DOMAIN-SUFFIX,open.cachefly.net'            # CacheFly CDN
+  - 'DOMAIN-SUFFIX,speedtest.linode.com'         # Linode测速
+
+  # ----------------------------------------
+  # WiFi管理和诊断工具
+  # ----------------------------------------
+  - 'DOMAIN-SUFFIX,wifiman.com'                  # WiFiMan管理
+  - 'DOMAIN-SUFFIX,wifiman.me'                   # WiFiMan服务
+  - 'DOMAIN-SUFFIX,wifiman.ubncloud.com'         # UBN Cloud WiFi
+  - 'DOMAIN-SUFFIX,wifiman-stability-test.ubncloud.com' # UBN稳定性测试
+
+  # ----------------------------------------
+  # 快速测速服务
+  # ----------------------------------------
+  - 'DOMAIN-SUFFIX,fast.com'                     # Netflix Fast测速
+
+  # ----------------------------------------
+  # 系统工具和测量服务
+  # ----------------------------------------
+  - 'DOMAIN-SUFFIX,speedtest.macpaw.com'         # MacPaw测速
+  - 'DOMAIN-SUFFIX,netspeedtestmaster.com'       # 网速测试大师
+  - 'DOMAIN-SUFFIX,measurement-lab.org'          # Measurement Lab
+  - 'DOMAIN-SUFFIX,measurementlab.net'           # Measurement Lab网络
+  - 'DOMAIN-SUFFIX,speed.googlefiber.net'        # Google Fiber测速
+  - 'DOMAIN-SUFFIX,backend.librespeed.org'       # LibreSpeed后端
+  - 'DOMAIN-SUFFIX,mensura.cdn-apple.com'        # Apple网络质量测试
+  - 'DOMAIN-SUFFIX,nperf.net'                    # NPerf测速
+  - 'DOMAIN-SUFFIX,speed.hinet.net'              # 台湾HiNet测速
+
+  # ----------------------------------------
+  # 精确IP地址代理规则
+  # ----------------------------------------
+  - 'IP-CIDR,155.94.145.17/32'                   # 特定服务器IP
+  - 'IP-CIDR,140.245.39.151/32'                  # 特定服务器IP
+  - 'IP-CIDR,140.245.48.164/32'                  # 特定服务器IP
+  - 'IP-CIDR,140.245.63.81/32'                   # 特定服务器IP
