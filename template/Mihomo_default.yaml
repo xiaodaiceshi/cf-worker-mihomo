@@ -14,7 +14,7 @@ proxy-groups:
   - { name: 🚫静默拒绝, type: select, hidden: true, proxies: [REJECT-DROP] }
   - { name: ⚪绕过连接, type: select, hidden: true, proxies: [PASS] }
   - { name: 🎯全球直连, type: select, proxies: [🎯全局直连, 🟢手动选择, 🟢手动选择2, ♻️自动选择] }
-  - { name: ♻️自动选择, <<: *u, tolerance: 1, type: url-test }
+  - { name: ♻️自动选择, <<: *u, tolerance: 5, type: url-test }
   - { name: ⚡️均衡负载, <<: *u, strategy: round-robin, type: load-balance }
   - { name: 🔯故障转移, <<: *u, type: fallback }
   - { name: Google, <<: *proxy, icon: https://jsd.onmicrosoft.cn/gh/Kwisma/rules@main/icon/webp/100/Google.webp }
