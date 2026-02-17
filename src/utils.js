@@ -132,6 +132,10 @@ export function configs(mihomo = '', singbox = '') {
                 label: '通用',
                 options: [
                     {
+                        label: 'shushutest (与Github同步) ',
+                        value: 'https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/template/test.yaml',
+                    },
+                    {
                         label: '默认(精简版) (仅国内外分流) (与Github同步) ',
                         value: 'https://raw.githubusercontent.com/Kwisma/cf-worker-mihomo/main/template/Mihomo_default.yaml',
                     },
