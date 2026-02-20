@@ -389,19 +389,22 @@ proxy-groups:
 
   - { name: 🔀 非标端口, type: select, proxies: [🐟 漏网之鱼, 🎯 全球直连] }
 
-# ================= 地区自动分组 =================
 
-  - { name: 🇭🇰 香港节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, filter: "(🇭🇰|港|HK|Hong Kong|HKG|九龙|新界)" }
+  
 
-  - { name: 🇺🇸 美国节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, filter: "(🇺🇸|美|US|USA|America|洛杉矶|纽约|西雅图|芝加哥)" }
+  # ================= 地区自动分组 =================
 
-  - { name: 🇯🇵 日本节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, filter: "(🇯🇵|日本|东京|大阪|JP|Japan|关西)" }
+  - { name: 🇭🇰 香港节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇭🇰|港|HK|Hong Kong|HKG|九龙|新界)" }
 
-  - { name: 🇸🇬 新加坡节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, filter: "(🇸🇬|新加坡|SG|Singapore|SIN)" }
+  - { name: 🇺🇸 美国节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇺🇸|美|US|USA|America|洛杉矶|纽约|西雅图|芝加哥)" }
 
-  - { name: 🇼🇸 台湾节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, filter: "(🇹🇼|台湾|TW|Taiwan|TPE)" }
+  - { name: 🇯🇵 日本节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇯🇵|日本|东京|大阪|JP|Japan|关西)" }
 
-  - { name: 🇰🇷 韩国节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, filter: "(🇰🇷|韩国|KR|Korea|首尔|ICN)" }
+  - { name: 🇸🇬 新加坡节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇸🇬|新加坡|SG|Singapore|SIN)" }
+
+  - { name: 🇼🇸 台湾节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇹🇼|台湾|TW|Taiwan|TPE)" }
+
+  - { name: 🇰🇷 韩国节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇰🇷|韩国|KR|Korea|首尔|ICN)" }
 
   - { name: 🎯 全球直连, type: select, proxies: [DIRECT] }
 
