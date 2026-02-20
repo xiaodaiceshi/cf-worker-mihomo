@@ -1,5 +1,5 @@
 # ==========================================================
-# 完整补全版：基于 Aethersailor 订阅转换模版
+# 完整校对版：基于 Aethersailor 订阅转换模版优化
 # 适用：Clash Verge (Mihomo/Meta 内核)
 # ==========================================================
 
@@ -30,10 +30,7 @@ dns:
       - https://dns.cloudflare.com/dns-query
       - https://dns.google/dns-query
 
-
-
-# Custom_OpenClash_Rules - Full YAML Version
-# Converted from Custom_Clash.ini
+# 可复用锚点
 domain_mrs: &domain_mrs
   type: http
   behavior: domain
@@ -52,111 +49,77 @@ rule-providers:
     behavior: classical
     url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml
     interval: 28800
-
   Custom_Port_Direct:
     type: http
     behavior: classical
     url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml
     interval: 28800
-
   cn_domain:
     <<: *domain_mrs
     url: "https://cdn.jsdelivr.net/gh/Kwisma/clash-rules@release/direct.mrs"
     path: ./ruleset/CN_Domain.mrs
-
   cn_ip:
     <<: *ipcidr_mrs
     url: "https://cdn.jsdelivr.net/gh/Kwisma/clash-rules@release/cncidr.mrs"
     path: ./ruleset/CN_IP.mrs
-
   private_domain:
     <<: *domain_mrs
     url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.mrs"
     path: ./ruleset/Private_Domain.mrs
-
   private_ip:
     <<: *ipcidr_mrs
     url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/private.mrs"
     path: ./ruleset/Private_IP.mrs
-
-  #biliintl_domain:
-    #<<: *domain_mrs
-    #url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/biliintl.mrs"
-    #path: ./ruleset/biliintl_domain.mrs
-  #ehentai_domain:
-    #<<: *domain_mrs
-    #url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/ehentai.mrs"
-    #path: ./ruleset/ehentai_domain.mrs
-  #embydirect_domain:
-    #<<: *domain_mrs
-    #url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embydirect.mrs"
-    #path: ./ruleset/embydirect_domain.mrs
-
   iptest:
     type: http
-    behavior: classical  # 支持域名 + IP 混合
-    format: yaml         # 如果用 YAML；如果是 text，可设为 text 或省略
+    behavior: classical
+    format: yaml
     url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/iptest.yaml"
     path: ./ruleset/iptest.yaml
-    interval: 86400     # 每天更新
   cloudflare:
     type: http
-    behavior: classical  # 支持域名 + IP 混合
-    format: yaml         # 如果用 YAML；如果是 text，可设为 text 或省略
+    behavior: classical
+    format: yaml
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Cloudflare/Cloudflare.yaml"
     path: ./ruleset/cloudflare.yaml
-    interval: 86400     # 每天更新
   PayPal:
     type: http
-    behavior: classical  # 支持域名 + IP 混合
-    format: yaml         # 如果用 YAML；如果是 text，可设为 text 或省略
+    behavior: classical
+    format: yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.yaml"
     path: ./ruleset/PayPal.yaml
-    interval: 86400     # 每天更新
   custom_proxy:
     type: http
-    behavior: classical  # 支持域名 + IP 混合
-    format: yaml         # 如果用 YAML；如果是 text，可设为 text 或省略
+    behavior: classical
+    format: yaml
     url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/custom_proxy.yaml"
     path: ./ruleset/custom_proxy.yaml
-    interval: 86400     # 每天更新
   custom_direct:
     type: http
-    behavior: classical  # 支持混合规则（域名 + IP 等）
-    format: yaml         # 如果用 YAML 格式；如果是 text，可省略或设为 text
+    behavior: classical
+    format: yaml
     url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/custom_direct.yaml"
     path: ./ruleset/custom_direct.yaml
-    interval: 86400     # 每天更新一次
   embydirect_domain:
     type: http
-    interval: 86400
     behavior: classical
     format: yaml
     url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embydirect.yaml"
     path: ./ruleset/embydirect_domain.yaml
-  
   github_domain:
     <<: *domain_mrs
     url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs"
     path: ./ruleset/github_domain.mrs
   epic_domain:
     type: http
-    interval: 86400
     behavior: classical
     format: yaml
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.yaml"
-    path: ./ruleset/epic_domain.yaml      
+    path: ./ruleset/epic_domain.yaml
   microsoft_domain:
     <<: *domain_mrs
     url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs"
     path: ./ruleset/microsoft_domain.mrs
-  WhatsApp_domain:
-    type: http
-    interval: 86400
-    behavior: classical
-    format: yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Whatsapp/Whatsapp.yaml"
-    path: ./ruleset/WhatsApp_domain.yaml
   ai_domain:
     <<: *domain_mrs
     url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/openai.mrs"
@@ -168,18 +131,13 @@ rule-providers:
   apple_domain:
     <<: *domain_mrs
     url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.mrs"
-    path: ./ruleset/apple_domain.mrs  
-  #emby_domain:
-  #  <<: *domain_mrs
-  #  url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/emby.mrs"
-  #  path: ./ruleset/emby_domain.mrs
+    path: ./ruleset/apple_domain.mrs
   emby_domain:
     type: http
-    interval: 86400
     behavior: classical
     format: yaml
     url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embyproxy.yaml"
-    path: ./ruleset/emby_domain.yaml    
+    path: ./ruleset/emby_domain.yaml
   twitter_domain:
     <<: *domain_mrs
     url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/twitter.mrs"
@@ -200,26 +158,10 @@ rule-providers:
     <<: *domain_mrs
     url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/netflix.mrs"
     path: ./ruleset/netflix_domain.mrs
-  #bilibili_domain:
-    #<<: *domain_mrs
-    #url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/bilibili.mrs"
-    #path: ./ruleset/bilibili_domain.mrs
-  #bahamut_domain:
-    #<<: *domain_mrs
-    #url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/bahamut.mrs"
-    #path: ./ruleset/bahamut_domain.mrs
   spotify_domain:
     <<: *domain_mrs
     url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/spotify.mrs"
     path: ./ruleset/spotify_domain.mrs
-  #pixiv_domain:
-    #<<: *domain_mrs
-    #url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/pixiv.mrs"
-    #path: ./ruleset/pixiv_domain.mrs
-  #geolocation-!cn:
-    #<<: *domain_mrs
-    #url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-!cn.mrs"
-    #path: ./ruleset/geolocation-!cn.mrs
   google_ip:
     <<: *ipcidr_mrs
     url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/google.mrs"
@@ -237,25 +179,63 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/telegram.mrs"
     path: ./ruleset/telegram_ip.mrs
 
-rules:
+proxies: []
 
-  # ================= 1️⃣ 自定义最高优先 =================
+proxy-groups:
+  - { name: 🎯 全球直连, type: select, proxies: [DIRECT] }
+  - { name: 🚀 手动选择, type: select, proxies: [♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: ♻️ 自动选择, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true }
+  - { name: 🎥 Emby, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🎯 全球直连, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎥 Emby Direct, type: select, proxies: [🎯 全球直连] }
+  - { name: 🍃 customgroup, type: select, include-all: true, proxies: [DIRECT] }
+  - { name: 🌐 Cloudflare, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点, 🎯 全球直连] }
+  - { name: 💬 即时通讯, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点, 🎯 全球直连] }
+  - { name: 🌐 社交媒体, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点, 🎯 全球直连] }
+  - { name: 🚀 GitHub, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点, 🎯 全球直连] }
+  - { name: 🤖 AI服务, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 📹 YouTube, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎥 Netflix, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎥 DisneyPlus, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎥 HBO, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎥 PrimeVideo, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎥 AppleTV+, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎻 Spotify, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 💳 PayPal, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎮 Epic, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🌎 国外媒体, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🛒 国外电商, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🎯 全球直连, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 📢 谷歌FCM, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🇬 谷歌服务, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🍎 苹果服务, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: Ⓜ️ 微软服务, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎮 游戏平台, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎮 Steam, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🚀 测速工具, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🐟 漏网之鱼, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🎯 全球直连, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🔀 非标端口, type: select, proxies: [🎯 全球直连, 🐟 漏网之鱼] }
+
+  - { name: 🇭🇰 香港节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇭🇰|港|HK|Hong Kong|HKG|九龙|新界)" }
+  - { name: 🇺🇸 美国节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇺🇸|美|US|USA|America|洛杉矶|纽约|西雅图|芝加哥)" }
+  - { name: 🇯🇵 日本节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇯🇵|日本|东京|大阪|JP|Japan|关西)" }
+  - { name: 🇸🇬 新加坡节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇸🇬|新加坡|SG|Singapore|SIN)" }
+  - { name: 🇹🇼 台湾节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇹🇼|台湾|TW|Taiwan|TPE)" }
+  - { name: 🇰🇷 韩国节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇰🇷|韩国|KR|Korea|首尔|ICN)" }
+
+rules:
+  # 1. 自定义最高优先
   - RULE-SET,custom_direct,🎯 全球直连
   - RULE-SET,custom_proxy,🍃 customgroup
   - RULE-SET,iptest,🍃 customgroup
   - RULE-SET,Custom_Port_Direct,🔀 非标端口
-
-  # ================= 2️⃣ 基础设施 / 私网 =================
+  # 2. 基础设施 / 私网
   - GEOSITE,private,🎯 全球直连
   - RULE-SET,private_domain,🎯 全球直连
   - RULE-SET,private_ip,🎯 全球直连,no-resolve
   - GEOIP,private,🎯 全球直连,no-resolve
-
-  # ================= 3️⃣ 特殊直连规则 =================
+  # 3. 特殊直连规则
   - RULE-SET,embydirect_domain,🎥 Emby Direct
   - RULE-SET,Steam_CDN_Classical,🎯 全球直连
-
-  # ================= 4️⃣ 高频精准 RULE-SET =================
+  # 4. 高频精准 RULE-SET
   - RULE-SET,ai_domain,🤖 AI服务
   - RULE-SET,github_domain,🚀 GitHub
   - RULE-SET,google_domain,🇬 谷歌服务
@@ -271,8 +251,7 @@ rules:
   - RULE-SET,epic_domain,🎮 Epic
   - RULE-SET,PayPal,💳 PayPal
   - RULE-SET,cloudflare,🌐 Cloudflare
-
-  # ================= 5️⃣ GEOSITE 分类规则 =================
+  # 5. GEOSITE 分类规则
   - GEOSITE,category-ai-!cn,🤖 AI服务
   - GEOSITE,category-communication,💬 即时通讯
   - GEOSITE,category-social-media-!cn,🌐 社交媒体
@@ -297,111 +276,21 @@ rules:
   - GEOSITE,category-entertainment,🌎 国外媒体
   - GEOSITE,category-ecommerce,🛒 国外电商
   - GEOSITE,gfw,🚀 手动选择
-
-  # ================= 6️⃣ 国内域名直连 =================
+  # 6. 国内域名直连
   - GEOSITE,google-cn,🎯 全球直连
   - GEOSITE,category-games@cn,🎯 全球直连
   - RULE-SET,cn_domain,🎯 全球直连
   - GEOSITE,cn,🎯 全球直连
-
-  # ================= 7️⃣ 精准 IP 规则 =================
+  # 7. 精准 IP 规则
   - RULE-SET,google_ip,🇬 谷歌服务,no-resolve
   - RULE-SET,netflix_ip,🎥 Netflix,no-resolve
   - RULE-SET,twitter_ip,🌐 社交媒体,no-resolve
   - RULE-SET,telegram_ip,💬 即时通讯,no-resolve
-
-  # ================= 8️⃣ 国内 IP 兜底 =================
+  # 8. 国内 IP 兜底
   - RULE-SET,cn_ip,🎯 全球直连,no-resolve
   - GEOIP,cn,🎯 全球直连,no-resolve
-
-  # ================= 9️⃣ FINAL =================
+  # 9. FINAL
   - MATCH,🐟 漏网之鱼
-
-
-proxy-groups:
-
-# ================= 核心分组 =================
-
-  - { name: 🚀 手动选择, type: select, proxies: [♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: ♻️ 自动选择, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true }
-
-# ================= 分类策略组 =================
-  - { name: 🎥 Emby, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🎯 全球直连, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 🎥 Emby Direct, type: select, proxies: [🎯 全球直连] }
-
-  - { name: 🍃 customgroup, type: select, include-all: true }
-
-  - { name: 🌐 Cloudflare, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点, 🎯 全球直连] }
-
-  - { name: 💬 即时通讯, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点, 🎯 全球直连] }
-
-  - { name: 🌐 社交媒体, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点, 🎯 全球直连] }
-
-  - { name: 🚀 GitHub, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点, 🎯 全球直连] }
-
-  - { name: 🤖 AI服务, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 📹 YouTube, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 🎥 Netflix, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 🎥 DisneyPlus, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 🎥 HBO, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 🎥 PrimeVideo, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 🎥 AppleTV+, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 🎻 Spotify, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 💳 PayPal, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-  
-  - { name: 🎮 Epic, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 🌎 国外媒体, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 🛒 国外电商, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🎯 全球直连, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 📢 谷歌FCM, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 🇬 谷歌服务, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 🍎 苹果服务, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: Ⓜ️ 微软服务, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 🎮 游戏平台, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 🎮 Steam, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 🚀 测速工具, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 🐟 漏网之鱼, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🎯 全球直连, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 🔀 非标端口, type: select, proxies: [🐟 漏网之鱼, 🎯 全球直连] }
-
-
-  
-
-  # ================= 地区自动分组 =================
-
-  - { name: 🇭🇰 香港节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇭🇰|港|HK|Hong Kong|HKG|九龙|新界)" }
-
-  - { name: 🇺🇸 美国节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇺🇸|美|US|USA|America|洛杉矶|纽约|西雅图|芝加哥)" }
-
-  - { name: 🇯🇵 日本节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇯🇵|日本|东京|大阪|JP|Japan|关西)" }
-
-  - { name: 🇸🇬 新加坡节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇸🇬|新加坡|SG|Singapore|SIN)" }
-
-  - { name: 🇼🇸 台湾节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇹🇼|台湾|TW|Taiwan|TPE)" }
-
-  - { name: 🇰🇷 韩国节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇰🇷|韩国|KR|Korea|首尔|ICN)" }
-
-  - { name: 🎯 全球直连, type: select, proxies: [DIRECT] }
-
 
 enable_rule_generator: true
 overwrite_original_rules: true
