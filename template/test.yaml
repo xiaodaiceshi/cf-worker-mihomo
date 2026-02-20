@@ -238,6 +238,7 @@ rules:
   # 4. 高频精准 RULE-SET
   - RULE-SET,ai_domain,🤖 AI服务
   - RULE-SET,github_domain,🚀 GitHub
+  - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,google_domain,🇬 谷歌服务
   - RULE-SET,apple_domain,🍎 苹果服务
   - RULE-SET,microsoft_domain,Ⓜ️ 微软服务
@@ -245,7 +246,6 @@ rules:
   - RULE-SET,telegram_domain,💬 即时通讯
   - RULE-SET,twitter_domain,🌐 社交媒体
   - RULE-SET,netflix_domain,🎥 Netflix
-  - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,spotify_domain,🎻 Spotify
   - RULE-SET,epic_domain,🎮 Epic
   - RULE-SET,PayPal,💳 PayPal
