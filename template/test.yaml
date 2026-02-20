@@ -238,59 +238,52 @@ rule-providers:
     path: ./ruleset/telegram_ip.mrs
 
 rules:
-  - GEOSITE,private,🎯 全球直连
-  - GEOIP,private,🎯 全球直连,no-resolve
-  - RULE-SET,cn_domain,🎯 全球直连
-  - RULE-SET,private_domain,🎯 全球直连
-  - RULE-SET,cn_ip,🎯 全球直连,no-resolve
-  - RULE-SET,private_ip,🎯 全球直连,no-resolve
-  - GEOSITE,google-cn,🎯 全球直连
-  - GEOSITE,category-games@cn,🎯 全球直连
-  - RULE-SET,Steam_CDN_Classical,🎯 全球直连
-  - GEOSITE,category-game-platforms-download,🎯 全球直连
-  - GEOSITE,category-public-tracker,🎯 全球直连
+
+  # ================= 1️⃣ 自定义最高优先 =================
   - RULE-SET,custom_direct,🎯 全球直连
-  - RULE-SET,embydirect_domain, 🎥 Emby Direct
-  
+  - RULE-SET,custom_proxy,🍃 customgroup
+  - RULE-SET,iptest,🍃 customgroup
+  - RULE-SET,Custom_Port_Direct,🔀 非标端口
 
-  - RULE-SET,iptest, 🍃 customgroup
-  - RULE-SET,cloudflare, 🌐 Cloudflare
-  - RULE-SET,PayPal, 💳 PayPal
-  - RULE-SET,custom_proxy, 🍃 customgroup
-  - RULE-SET,github_domain, 🚀 GitHub
-  - RULE-SET,epic_domain, 🎮 Epic
-  - RULE-SET,microsoft_domain, Ⓜ️ 微软服务
-  - RULE-SET,ai_domain, 🤖 AI服务
-  - RULE-SET,onedrive_domain, Ⓜ️ 微软服务
-  - RULE-SET,apple_domain, 🍎 苹果服务
-  - RULE-SET,emby_domain, 🎥 Emby
-  - RULE-SET,twitter_domain, 🌐 社交媒体
-  - RULE-SET,youtube_domain, 📹 YouTube
-  - RULE-SET,google_domain, 🇬 谷歌服务
-  - RULE-SET,telegram_domain, 💬 即时通讯
-  - RULE-SET,netflix_domain, 🎥 Netflix
-  - RULE-SET,spotify_domain, 🎻 Spotify
-  - RULE-SET,google_ip, 🇬 谷歌服务,no-resolve
-  - RULE-SET,netflix_ip, 🎥 Netflix,no-resolve
-  - RULE-SET,twitter_ip, 🌐 社交媒体,no-resolve
-  - RULE-SET,telegram_ip, 💬 即时通讯,no-resolve
+  # ================= 2️⃣ 基础设施 / 私网 =================
+  - GEOSITE,private,🎯 全球直连
+  - RULE-SET,private_domain,🎯 全球直连
+  - RULE-SET,private_ip,🎯 全球直连,no-resolve
+  - GEOIP,private,🎯 全球直连,no-resolve
 
+  # ================= 3️⃣ 特殊直连规则 =================
+  - RULE-SET,embydirect_domain,🎥 Emby Direct
+  - RULE-SET,Steam_CDN_Classical,🎯 全球直连
 
+  # ================= 4️⃣ 高频精准 RULE-SET =================
+  - RULE-SET,ai_domain,🤖 AI服务
+  - RULE-SET,github_domain,🚀 GitHub
+  - RULE-SET,google_domain,🇬 谷歌服务
+  - RULE-SET,apple_domain,🍎 苹果服务
+  - RULE-SET,microsoft_domain,Ⓜ️ 微软服务
+  - RULE-SET,onedrive_domain,Ⓜ️ 微软服务
+  - RULE-SET,telegram_domain,💬 即时通讯
+  - RULE-SET,twitter_domain,🌐 社交媒体
+  - RULE-SET,netflix_domain,🎥 Netflix
+  - RULE-SET,youtube_domain,📹 YouTube
+  - RULE-SET,spotify_domain,🎻 Spotify
+  - RULE-SET,emby_domain,🎥 Emby
+  - RULE-SET,epic_domain,🎮 Epic
+  - RULE-SET,PayPal,💳 PayPal
+  - RULE-SET,cloudflare,🌐 Cloudflare
 
+  # ================= 5️⃣ GEOSITE 分类规则 =================
+  - GEOSITE,category-ai-!cn,🤖 AI服务
   - GEOSITE,category-communication,💬 即时通讯
   - GEOSITE,category-social-media-!cn,🌐 社交媒体
-  - GEOSITE,category-ai-!cn,🤖 AI服务
   - GEOSITE,github,🚀 GitHub
-  - GEOSITE,category-speedtest,🚀 测速工具
-  - GEOSITE,steam,🎮 Steam
-  - GEOSITE,youtube,📹 YouTube
-  - GEOSITE,apple-tvplus,🎥 AppleTV+
-  - GEOSITE,apple,🍎 苹果服务
-  - GEOSITE,microsoft,Ⓜ️ 微软服务
   - GEOSITE,googlefcm,📢 谷歌FCM
   - GEOSITE,google,🇬 谷歌服务
-  - GEOSITE,tiktok,🎶 TikTok
+  - GEOSITE,apple,🍎 苹果服务
+  - GEOSITE,microsoft,Ⓜ️ 微软服务
   - GEOSITE,netflix,🎥 Netflix
+  - GEOSITE,youtube,📹 YouTube
+  - GEOSITE,tiktok,🎶 TikTok
   - GEOSITE,disney,🎥 DisneyPlus
   - GEOSITE,hbo,🎥 HBO
   - GEOSITE,primevideo,🎥 PrimeVideo
@@ -298,20 +291,30 @@ rules:
   - GEOSITE,spotify,🎻 Spotify
   - GEOSITE,bahamut,📺 Bahamut
   - GEOSITE,category-games,🎮 游戏平台
+  - GEOSITE,steam,🎮 Steam
+  - GEOSITE,category-speedtest,🚀 测速工具
+  - GEOSITE,category-public-tracker,🎯 全球直连
   - GEOSITE,category-entertainment,🌎 国外媒体
   - GEOSITE,category-ecommerce,🛒 国外电商
   - GEOSITE,gfw,🚀 手动选择
 
-  - GEOIP,telegram,💬 即时通讯,no-resolve
-  - GEOIP,twitter,🌐 社交媒体,no-resolve
-  - GEOIP,facebook,🌐 社交媒体,no-resolve
-  - GEOIP,google,🇬 谷歌服务,no-resolve
-  - GEOIP,netflix,🎥 Netflix,no-resolve
-
+  # ================= 6️⃣ 国内域名直连 =================
+  - GEOSITE,google-cn,🎯 全球直连
+  - GEOSITE,category-games@cn,🎯 全球直连
+  - RULE-SET,cn_domain,🎯 全球直连
   - GEOSITE,cn,🎯 全球直连
+
+  # ================= 7️⃣ 精准 IP 规则 =================
+  - RULE-SET,google_ip,🇬 谷歌服务,no-resolve
+  - RULE-SET,netflix_ip,🎥 Netflix,no-resolve
+  - RULE-SET,twitter_ip,🌐 社交媒体,no-resolve
+  - RULE-SET,telegram_ip,💬 即时通讯,no-resolve
+
+  # ================= 8️⃣ 国内 IP 兜底 =================
+  - RULE-SET,cn_ip,🎯 全球直连,no-resolve
   - GEOIP,cn,🎯 全球直连,no-resolve
 
-  - RULE-SET,Custom_Port_Direct,🔀 非标端口
+  # ================= 9️⃣ FINAL =================
   - MATCH,🐟 漏网之鱼
 
 
