@@ -182,38 +182,37 @@ rule-providers:
 proxies: []
 
 proxy-groups:
-  - { name: 🎯 全球直连, type: select, proxies: [DIRECT] }
-  - { name: 🚀 手动选择, type: select, proxies: [♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🚀 手动选择, type: select, proxies: [♻️ 自动选择, 🍃 customgroup, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
   - { name: ♻️ 自动选择, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true }
-  - { name: 🎥 Emby, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🎯 全球直连, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎥 Emby, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🎯 全球直连, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
   - { name: 🎥 Emby Direct, type: select, proxies: [🎯 全球直连] }
   - { name: 🍃 customgroup, type: select, include-all: true }
-  - { name: 🌐 Cloudflare, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点, 🎯 全球直连] }
-  - { name: 💬 即时通讯, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点, 🎯 全球直连] }
-  - { name: 🌐 社交媒体, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点, 🎯 全球直连] }
-  - { name: 🚀 GitHub, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点, 🎯 全球直连] }
-  - { name: 🤖 AI服务, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: 📹 YouTube, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: 🎥 Netflix, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: 🎥 DisneyPlus, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: 🎥 HBO, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: 🎥 PrimeVideo, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: 🎥 AppleTV+, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: 🎻 Spotify, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: 💳 PayPal, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: 🎮 Epic, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: 🌎 国外媒体, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: 🛒 国外电商, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🎯 全球直连, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: 📢 谷歌FCM, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: 🇬 谷歌服务, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: 🍎 苹果服务, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: Ⓜ️ 微软服务, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: 🎮 游戏平台, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: 🎮 Steam, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: 🚀 测速工具, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
-  - { name: 🐟 漏网之鱼, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🎯 全球直连, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🌐 Cloudflare, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点, 🎯 全球直连] }
+  - { name: 💬 即时通讯, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🌐 社交媒体, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🚀 GitHub, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🤖 AI服务, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇸🇬 新加坡节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 📹 YouTube, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎥 Netflix, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎥 DisneyPlus, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎥 HBO, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎥 PrimeVideo, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎥 AppleTV+, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎻 Spotify, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 💳 PayPal, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎮 Epic, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🌎 国外媒体, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🛒 国外电商, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🎯 全球直连, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 📢 谷歌FCM, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🇬 谷歌服务, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🍎 苹果服务, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: Ⓜ️ 微软服务, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎮 游戏平台, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🎮 Steam, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🚀 测速工具, type: select, proxies: [🎯 全球直连, 🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
+  - { name: 🐟 漏网之鱼, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🍃 customgroup, 🎯 全球直连, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点] }
   - { name: 🔀 非标端口, type: select, proxies: [🎯 全球直连, 🐟 漏网之鱼] }
-
+  - { name: 🎯 全球直连, type: select, proxies: [DIRECT] }
   - { name: 🇭🇰 香港节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇭🇰|港|HK|Hong Kong|HKG|九龙|新界)" }
   - { name: 🇺🇸 美国节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇺🇸|美|US|USA|America|洛杉矶|纽约|西雅图|芝加哥)" }
   - { name: 🇯🇵 日本节点, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(🇯🇵|日本|东京|大阪|JP|Japan|关西)" }
