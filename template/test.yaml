@@ -34,32 +34,19 @@ dns:
 
 # Custom_OpenClash_Rules - Full YAML Version
 # Converted from Custom_Clash.ini
+domain_mrs: &domain_mrs
+  type: http
+  behavior: domain
+  format: mrs
+  interval: 86400
+
+ipcidr_mrs: &ipcidr_mrs
+  type: http
+  behavior: ipcidr
+  format: mrs
+  interval: 86400
 
 rule-providers:
-  Custom_Direct_Domain:
-    type: http
-    behavior: domain
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Domain.yaml
-    interval: 28800
-
-  Custom_Direct_Classical_IP:
-    type: http
-    behavior: classical
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical_IP.yaml
-    interval: 28800
-
-  Custom_Proxy_Domain:
-    type: http
-    behavior: domain
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Domain.yaml
-    interval: 28800
-
-  Custom_Proxy_Classical_IP:
-    type: http
-    behavior: classical
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Classical_IP.yaml
-    interval: 28800
-
   Steam_CDN_Classical:
     type: http
     behavior: classical
@@ -72,23 +59,226 @@ rule-providers:
     url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml
     interval: 28800
 
+  cn_domain:
+    <<: *domain_mrs
+    url: "https://cdn.jsdelivr.net/gh/Kwisma/clash-rules@release/direct.mrs"
+    path: ./ruleset/CN_Domain.mrs
+
+  cn_ip:
+    <<: *ipcidr_mrs
+    url: "https://cdn.jsdelivr.net/gh/Kwisma/clash-rules@release/cncidr.mrs"
+    path: ./ruleset/CN_IP.mrs
+
+  private_domain:
+    <<: *domain_mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.mrs"
+    path: ./ruleset/Private_Domain.mrs
+
+  private_ip:
+    <<: *ipcidr_mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/private.mrs"
+    path: ./ruleset/Private_IP.mrs
+
+  #biliintl_domain:
+    #<<: *domain_mrs
+    #url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/biliintl.mrs"
+    #path: ./ruleset/biliintl_domain.mrs
+  #ehentai_domain:
+    #<<: *domain_mrs
+    #url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/ehentai.mrs"
+    #path: ./ruleset/ehentai_domain.mrs
+  #embydirect_domain:
+    #<<: *domain_mrs
+    #url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embydirect.mrs"
+    #path: ./ruleset/embydirect_domain.mrs
+
+  iptest:
+    type: http
+    behavior: classical  # 支持域名 + IP 混合
+    format: yaml         # 如果用 YAML；如果是 text，可设为 text 或省略
+    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/iptest.yaml"
+    path: ./ruleset/iptest.yaml
+    interval: 86400     # 每天更新
+  cloudflare:
+    type: http
+    behavior: classical  # 支持域名 + IP 混合
+    format: yaml         # 如果用 YAML；如果是 text，可设为 text 或省略
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Cloudflare/Cloudflare.yaml"
+    path: ./ruleset/cloudflare.yaml
+    interval: 86400     # 每天更新
+  PayPal:
+    type: http
+    behavior: classical  # 支持域名 + IP 混合
+    format: yaml         # 如果用 YAML；如果是 text，可设为 text 或省略
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.yaml"
+    path: ./ruleset/PayPal.yaml
+    interval: 86400     # 每天更新
+  custom_proxy:
+    type: http
+    behavior: classical  # 支持域名 + IP 混合
+    format: yaml         # 如果用 YAML；如果是 text，可设为 text 或省略
+    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/custom_proxy.yaml"
+    path: ./ruleset/custom_proxy.yaml
+    interval: 86400     # 每天更新
+  custom_direct:
+    type: http
+    behavior: classical  # 支持混合规则（域名 + IP 等）
+    format: yaml         # 如果用 YAML 格式；如果是 text，可省略或设为 text
+    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/custom_direct.yaml"
+    path: ./ruleset/custom_direct.yaml
+    interval: 86400     # 每天更新一次
+  embydirect_domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embydirect.yaml"
+    path: ./ruleset/embydirect_domain.yaml
+  
+  github_domain:
+    <<: *domain_mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs"
+    path: ./ruleset/github_domain.mrs
+  epic_domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.yaml"
+    path: ./ruleset/epic_domain.yaml      
+  microsoft_domain:
+    <<: *domain_mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs"
+    path: ./ruleset/microsoft_domain.mrs
+  WhatsApp_domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Whatsapp/Whatsapp.yaml"
+    path: ./ruleset/WhatsApp_domain.yaml
+  ai_domain:
+    <<: *domain_mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/openai.mrs"
+    path: ./ruleset/ai_domain.mrs
+  onedrive_domain:
+    <<: *domain_mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/onedrive.mrs"
+    path: ./ruleset/onedrive_domain.mrs
+  apple_domain:
+    <<: *domain_mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.mrs"
+    path: ./ruleset/apple_domain.mrs  
+  #emby_domain:
+  #  <<: *domain_mrs
+  #  url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/emby.mrs"
+  #  path: ./ruleset/emby_domain.mrs
+  emby_domain:
+    type: http
+    interval: 86400
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embyproxy.yaml"
+    path: ./ruleset/emby_domain.yaml    
+  twitter_domain:
+    <<: *domain_mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/twitter.mrs"
+    path: ./ruleset/twitter_domain.mrs
+  youtube_domain:
+    <<: *domain_mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/youtube.mrs"
+    path: ./ruleset/youtube_domain.mrs
+  google_domain:
+    <<: *domain_mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.mrs"
+    path: ./ruleset/google_domain.mrs
+  telegram_domain:
+    <<: *domain_mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.mrs"
+    path: ./ruleset/telegram_domain.mrs
+  netflix_domain:
+    <<: *domain_mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/netflix.mrs"
+    path: ./ruleset/netflix_domain.mrs
+  #bilibili_domain:
+    #<<: *domain_mrs
+    #url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/bilibili.mrs"
+    #path: ./ruleset/bilibili_domain.mrs
+  #bahamut_domain:
+    #<<: *domain_mrs
+    #url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/bahamut.mrs"
+    #path: ./ruleset/bahamut_domain.mrs
+  spotify_domain:
+    <<: *domain_mrs
+    url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/spotify.mrs"
+    path: ./ruleset/spotify_domain.mrs
+  #pixiv_domain:
+    #<<: *domain_mrs
+    #url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/pixiv.mrs"
+    #path: ./ruleset/pixiv_domain.mrs
+  #geolocation-!cn:
+    #<<: *domain_mrs
+    #url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-!cn.mrs"
+    #path: ./ruleset/geolocation-!cn.mrs
+  google_ip:
+    <<: *ipcidr_mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/google.mrs"
+    path: ./ruleset/google_ip.mrs
+  netflix_ip:
+    <<: *ipcidr_mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/netflix.mrs"
+    path: ./ruleset/netflix_ip.mrs
+  twitter_ip:
+    <<: *ipcidr_mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/twitter.mrs"
+    path: ./ruleset/twitter_ip.mrs
+  telegram_ip:
+    <<: *ipcidr_mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/telegram.mrs"
+    path: ./ruleset/telegram_ip.mrs
 
 rules:
   - GEOSITE,private,🎯 全球直连
   - GEOIP,private,🎯 全球直连,no-resolve
-  - RULE-SET,Custom_Direct_Domain,🎯 全球直连
-  - RULE-SET,Custom_Direct_Classical_IP,🎯 全球直连
-  - RULE-SET,Custom_Proxy_Domain,🚀 手动选择
-  - RULE-SET,Custom_Proxy_Classical_IP,🚀 手动选择
+  - RULE-SET,cn_domain,🎯 全球直连
+  - RULE-SET,private_domain,🎯 全球直连
+  - RULE-SET,cn_ip,🎯 全球直连,no-resolve
+  - RULE-SET,private_ip,🎯 全球直连,no-resolve
   - GEOSITE,google-cn,🎯 全球直连
   - GEOSITE,category-games@cn,🎯 全球直连
   - RULE-SET,Steam_CDN_Classical,🎯 全球直连
   - GEOSITE,category-game-platforms-download,🎯 全球直连
   - GEOSITE,category-public-tracker,🎯 全球直连
+  - RULE-SET,custom_direct,🎯 全球直连
+  - RULE-SET,embydirect_domain, 🎥 Emby Direct
+  
+
+  - RULE-SET,iptest, 🍃 customgroup
+  - RULE-SET,cloudflare, 🌐 Cloudflare
+  - RULE-SET,PayPal, 💳 PayPal
+  - RULE-SET,custom_proxy, 🍃 customgroup
+  - RULE-SET,github_domain, 🚀 GitHub
+  - RULE-SET,epic_domain, 🎮 Epic
+  - RULE-SET,microsoft_domain, Ⓜ️ 微软服务
+  - RULE-SET,ai_domain, 🤖 AI服务
+  - RULE-SET,onedrive_domain, Ⓜ️ 微软服务
+  - RULE-SET,apple_domain, 🍎 苹果服务
+  - RULE-SET,emby_domain, 🎥 Emby
+  - RULE-SET,twitter_domain, 🌐 社交媒体
+  - RULE-SET,youtube_domain, 📹 YouTube
+  - RULE-SET,google_domain, 🇬 谷歌服务
+  - RULE-SET,telegram_domain, 💬 即时通讯
+  - RULE-SET,netflix_domain, 🎥 Netflix
+  - RULE-SET,spotify_domain, 🎻 Spotify
+  - RULE-SET,google_ip, 🇬 谷歌服务,no-resolve
+  - RULE-SET,netflix_ip, 🎥 Netflix,no-resolve
+  - RULE-SET,twitter_ip, 🌐 社交媒体,no-resolve
+  - RULE-SET,telegram_ip, 💬 即时通讯,no-resolve
+
+
 
   - GEOSITE,category-communication,💬 即时通讯
   - GEOSITE,category-social-media-!cn,🌐 社交媒体
-  - GEOSITE,openai,🤖 ChatGPT
   - GEOSITE,category-ai-!cn,🤖 AI服务
   - GEOSITE,github,🚀 GitHub
   - GEOSITE,category-speedtest,🚀 测速工具
@@ -140,6 +330,13 @@ proxy-groups:
       - ".*"
 
 # ================= 分类策略组 =================
+  - { name: 🎥 Emby, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🎯 全球直连, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
+
+  - { name: 🎥 Emby Direct, type: select, proxies: [🎯 全球直连] }
+
+  - { name: 🍃 customgroup, type: select, include-all: true }
+
+  - { name: 🌐 Cloudflare, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点, 🎯 全球直连] }
 
   - { name: 💬 即时通讯, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点, 🎯 全球直连] }
 
@@ -147,11 +344,7 @@ proxy-groups:
 
   - { name: 🚀 GitHub, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点, 🎯 全球直连] }
 
-  - { name: 🤖 ChatGPT, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
   - { name: 🤖 AI服务, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
-  - { name: 🎶 TikTok, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
 
   - { name: 📹 YouTube, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
 
@@ -165,11 +358,11 @@ proxy-groups:
 
   - { name: 🎥 AppleTV+, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇸🇬 新加坡节点, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
 
-  - { name: 🎥 Emby, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🎯 全球直连, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
-
   - { name: 🎻 Spotify, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
 
-  - { name: 📺 Bahamut, type: select, proxies: [🇼🇸 台湾节点, 🚀 手动选择, 🎯 全球直连] }
+  - { name: 💳 PayPal, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
+  
+  - { name: 🎮 Epic, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
 
   - { name: 🌎 国外媒体, type: select, proxies: [🚀 手动选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇼🇸 台湾节点, 🇰🇷 韩国节点] }
 
