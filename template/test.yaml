@@ -223,6 +223,8 @@ proxy-groups:
 rules:
   # 1. 自定义最高优先
   - RULE-SET,custom_direct,🎯 全球直连
+  - RULE-SET,embydirect_domain,🎥 Emby Direct
+  - RULE-SET,emby_domain,🎥 Emby
   - RULE-SET,custom_proxy,🍃 customgroup
   - RULE-SET,iptest,🍃 customgroup
   - RULE-SET,Custom_Port_Direct,🔀 非标端口
@@ -232,7 +234,6 @@ rules:
   - RULE-SET,private_ip,🎯 全球直连,no-resolve
   - GEOIP,private,🎯 全球直连,no-resolve
   # 3. 特殊直连规则
-  - RULE-SET,embydirect_domain,🎥 Emby Direct
   - RULE-SET,Steam_CDN_Classical,🎯 全球直连
   # 4. 高频精准 RULE-SET
   - RULE-SET,ai_domain,🤖 AI服务
@@ -246,7 +247,6 @@ rules:
   - RULE-SET,netflix_domain,🎥 Netflix
   - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,spotify_domain,🎻 Spotify
-  - RULE-SET,emby_domain,🎥 Emby
   - RULE-SET,epic_domain,🎮 Epic
   - RULE-SET,PayPal,💳 PayPal
   - RULE-SET,cloudflare,🌐 Cloudflare
