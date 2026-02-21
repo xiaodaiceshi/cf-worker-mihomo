@@ -171,6 +171,16 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
 
+  fake-ip-filter:
+  - RULE-SET:private_domain,fakeip_filter_domain,cn_domain,dns_domain
+  - "+.github.com"
+  - "+.githubusercontent.com"
+  - "+.raw.githubusercontent.com"
+  - "+.gitlab.com"
+  - "+.docker.io"
+  - "+.npmjs.org"
+  - "+.pypi.org"
+
   nameserver-policy:
     "RULE-SET:private_domain,cn_domain":
       - 220.189.127.106
