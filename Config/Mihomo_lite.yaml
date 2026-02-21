@@ -160,54 +160,38 @@ tun:
 #  curl https://1.1.1.1/dns-query --http3-only -vI
 #  q www.baidu.com @https://1.1.1.1/dns-query --http3
 dns:
-  enable: true
-  cache-algorithm: arc
-  prefer-h3: false
-  use-hosts: true
-  use-system-hosts: true
-  respect-rules: false
-  listen: 0.0.0.0:7874
-  ipv6: false
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-
+  enable: true # 启用 DNS 模块
+  cache-algorithm: arc # 缓存算法，参数:lru 最近最少使用，arc 自适应替换缓存
+  prefer-h3: false # DOH 优先使用 http/3
+  use-hosts: true # 使用配置中的 hosts 文件条目
+  use-system-hosts: true # 使用系统的 hosts 文件条目
+  respect-rules: false # dns 连接遵守路由规则，需配置 proxy-server-nameserver, 强烈不建议和 prefer-h3 一起使用, 与遵守 nameserver-policy 冲突 
+  listen: 0.0.0.0:1053 # 本地 DNS 监听端口，默认是 1053 端口
+  ipv6: true # 启用 IPv6 DNS 解析，避免 IPv6 地址的解析请求
+  default-nameserver: 
+    - 223.5.5.5
+    - 119.29.29.29
+    - system
+  enhanced-mode: fake-ip # 启用增强模式 redir-host or fake-ip
+  fake-ip-range: 198.18.0.1/16 # fake-ip 池设置
+  fake-ip-filter-mode: blacklist
   fake-ip-filter:
-  - RULE-SET:private_domain,fakeip_filter_domain,cn_domain,dns_domain
-  - "+.github.com"
-  - "+.githubusercontent.com"
-  - "+.raw.githubusercontent.com"
-  - "+.gitlab.com"
-  - "+.docker.io"
-  - "+.npmjs.org"
-  - "+.pypi.org"
-
+    - RULE-SET:private_domain,fakeip_filter_domain,cn_domain,dns_domain
   nameserver-policy:
     "RULE-SET:private_domain,cn_domain":
-      - 220.189.127.106
-      - 220.189.127.107
-      - tcp://220.189.127.106:53
-      - tcp://220.189.127.107:53
-    "geosite:geolocation-!cn":
-      - tls://1.1.1.1:853
-      - tls://8.8.8.8:853
+      - "quic://dns.alidns.com" # 阿里 DNS over DOQ
+      - "https://doh.pub/dns-query" # 腾讯 DNS DOH
+  nameserver: #  不能使用国内dns和被墙的dns
+    - "https://cloudflare-dns.com/dns-query#h3=true" # Cloudflare DNS over H3
+    - "https://doh.opendns.com/dns-query" # Open DNS over DOH
+  proxy-server-nameserver: # 代理节点域名解析服务器，仅用于解析代理节点的域名，不能使用 system，不能设置 ecs
+    - "https://cloudflare-dns.com/dns-query#h3=true" # Cloudflare DNS over H3
+    - "https://doh.opendns.com/dns-query" # Open DNS over DOH
+  direct-nameserver: #  用于直连出口域名解析的 DNS 服务器，不能使用 system，不能设置 ecs
+    - "quic://dns.alidns.com" # 阿里 DNS over DOQ
+    - "https://doh.pub/dns-query" # 腾讯 DNS DOH
+  direct-nameserver-follow-policy: true # 是否遵循 nameserver-policy，默认为不遵守，仅当 direct-nameserver 不为空时生效
 
-  nameserver:
-    - tls://1.1.1.1:853
-    - tls://8.8.8.8:853
-
-  proxy-server-nameserver:
-    - tls://1.1.1.1:853
-    - tls://8.8.8.8:853
-
-  direct-nameserver:
-    - 220.189.127.106
-    - 220.189.127.107
-
-  direct-nameserver-follow-policy: true
-
-ipcidr_mrs: &ipcidr_mrs { type: http, interval: 28800, behavior: ipcidr, format: mrs, proxy: 🎯 全球直连 }
-domain_mrs: &domain_mrs { type: http, interval: 28800, behavior: domain, format: mrs, proxy: 🎯 全球直连 }
-  
 rule-providers:
   cn_domain:
     type: http
@@ -241,149 +225,3 @@ rule-providers:
     proxy: DIRECT
     url: "https://jsd.onmicrosoft.cn/gh/peiyingyao/Rule-for-OCD@master/rule/Clash/DNS/DNS_OCD_Domain.mrs"
     path: ./ruleset/DNS_Domain.mrs
-  Steam_CDN_Classical:
-    type: http
-    behavior: classical
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml
-    interval: 28800
-  Custom_Port_Direct:
-    type: http
-    behavior: classical
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml
-    interval: 28800
-  cn_domain:
-    <<: *domain_mrs
-    url: "https://cdn.jsdelivr.net/gh/Kwisma/clash-rules@release/direct.mrs"
-    path: ./ruleset/CN_Domain.mrs
-  cn_ip:
-    <<: *ipcidr_mrs
-    url: "https://cdn.jsdelivr.net/gh/Kwisma/clash-rules@release/cncidr.mrs"
-    path: ./ruleset/CN_IP.mrs
-  private_domain:
-    <<: *domain_mrs
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.mrs"
-    path: ./ruleset/Private_Domain.mrs
-  private_ip:
-    <<: *ipcidr_mrs
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/private.mrs"
-    path: ./ruleset/Private_IP.mrs
-  iptest:
-    type: http
-    behavior: classical
-    format: yaml
-    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/iptest.yaml"
-    path: ./ruleset/iptest.yaml
-    interval: 28800
-  cloudflare:
-    type: http
-    behavior: classical
-    format: yaml
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Cloudflare/Cloudflare.yaml"
-    path: ./ruleset/cloudflare.yaml
-    interval: 28800
-  PayPal:
-    type: http
-    behavior: classical
-    format: yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.yaml"
-    path: ./ruleset/PayPal.yaml
-    interval: 28800
-  custom_proxy:
-    type: http
-    behavior: classical
-    format: yaml
-    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/custom_proxy.yaml"
-    path: ./ruleset/custom_proxy.yaml
-    interval: 28800
-  custom_direct:
-    type: http
-    behavior: classical
-    format: yaml
-    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/custom_direct.yaml"
-    path: ./ruleset/custom_direct.yaml
-    interval: 28800
-  embydirect_domain:
-    type: http
-    behavior: classical
-    format: yaml
-    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embydirect.yaml"
-    path: ./ruleset/embydirect_domain.yaml
-    interval: 28800
-  github_domain:
-    <<: *domain_mrs
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs"
-    path: ./ruleset/github_domain.mrs
-  epic_domain:
-    type: http
-    behavior: classical
-    format: yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.yaml"
-    path: ./ruleset/epic_domain.yaml
-    interval: 28800
-  microsoft_domain:
-    <<: *domain_mrs
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs"
-    path: ./ruleset/microsoft_domain.mrs
-  ai_domain:
-    <<: *domain_mrs
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/openai.mrs"
-    path: ./ruleset/ai_domain.mrs
-  onedrive_domain:
-    <<: *domain_mrs
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/onedrive.mrs"
-    path: ./ruleset/onedrive_domain.mrs
-  apple_domain:
-    <<: *domain_mrs
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.mrs"
-    path: ./ruleset/apple_domain.mrs
-  emby_domain:
-    type: http
-    behavior: classical
-    format: yaml
-    url: "https://raw.githubusercontent.com/xiaodaiceshi/cf-worker-mihomo/main/rules/embyproxy.yaml"
-    path: ./ruleset/emby_domain.yaml
-    interval: 28800
-  twitter_domain:
-    <<: *domain_mrs
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/twitter.mrs"
-    path: ./ruleset/twitter_domain.mrs
-  youtube_domain:
-    <<: *domain_mrs
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/youtube.mrs"
-    path: ./ruleset/youtube_domain.mrs
-  google_domain:
-    <<: *domain_mrs
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.mrs"
-    path: ./ruleset/google_domain.mrs
-  telegram_domain:
-    <<: *domain_mrs
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.mrs"
-    path: ./ruleset/telegram_domain.mrs
-  netflix_domain:
-    <<: *domain_mrs
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/netflix.mrs"
-    path: ./ruleset/netflix_domain.mrs
-  spotify_domain:
-    <<: *domain_mrs
-    url: "https://jsd.onmicrosoft.cn/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/spotify.mrs"
-    path: ./ruleset/spotify_domain.mrs
-  google_ip:
-    <<: *ipcidr_mrs
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/google.mrs"
-    path: ./ruleset/google_ip.mrs
-  netflix_ip:
-    <<: *ipcidr_mrs
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/netflix.mrs"
-    path: ./ruleset/netflix_ip.mrs
-  twitter_ip:
-    <<: *ipcidr_mrs
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/twitter.mrs"
-    path: ./ruleset/twitter_ip.mrs
-  telegram_ip:
-    <<: *ipcidr_mrs
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/telegram.mrs"
-    path: ./ruleset/telegram_ip.mrs
-  geolocation-!cn:
-    <<: *domain_mrs
-    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-!cn.mrs"
-    path: ./ruleset/geolocation-!cn.mrs
