@@ -36,14 +36,6 @@ payload:
   - 'DOMAIN-SUFFIX,bpjc.pics'    # 图片服务
   - 'DOMAIN-SUFFIX,18934569.xyz' # 数字域名服务
   - 'DOMAIN-SUFFIX,yunray.ai'    # AI服务
-
-  # ----------------------------------------
-  # 完美世界相关服务直连
-  # ----------------------------------------
-  - 'DOMAIN-SUFFIX,wanmeiwl1.xyz'  # 完美世界服务1
-  - 'DOMAIN-SUFFIX,wanmeiwl3.xyz'  # 完美世界服务3
-  - 'DOMAIN-SUFFIX,wanmeiwl4.xyz'  # 完美世界服务4
-
   # ----------------------------------------
   # 国际知名服务直连
   # ----------------------------------------
