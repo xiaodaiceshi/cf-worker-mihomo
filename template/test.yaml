@@ -8,41 +8,7 @@
 ipcidr_mrs: &ipcidr_mrs { type: http, interval: 28800, behavior: ipcidr, format: mrs, proxy: 🎯 全球直连 }
 domain_mrs: &domain_mrs { type: http, interval: 28800, behavior: domain, format: mrs, proxy: 🎯 全球直连 }
   
-dns:
-  enable: true
-  cache-algorithm: arc
-  prefer-h3: false
-  use-hosts: true
-  use-system-hosts: true
-  respect-rules: false
-  listen: 0.0.0.0:7874
-  ipv6: false
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
 
-  nameserver-policy:
-    "RULE-SET:private_domain,cn_domain":
-      - 220.189.127.106
-      - 220.189.127.107
-      - tcp://220.189.127.106:53
-      - tcp://220.189.127.107:53
-    "RULE-SET:geolocation-!cn":
-      - tls://1.1.1.1:853
-      - tls://8.8.8.8:853
-
-  nameserver:
-    - tls://1.1.1.1:853
-    - tls://8.8.8.8:853
-
-  proxy-server-nameserver:
-    - tls://1.1.1.1:853
-    - tls://8.8.8.8:853
-
-  direct-nameserver:
-    - 220.189.127.106
-    - 220.189.127.107
-
-  direct-nameserver-follow-policy: true
 
 rule-providers:
   Steam_CDN_Classical:

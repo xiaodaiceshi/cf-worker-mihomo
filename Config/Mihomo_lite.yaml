@@ -187,7 +187,7 @@ dns:
       - 220.189.127.107
       - tcp://220.189.127.106:53
       - tcp://220.189.127.107:53
-    "RULE-SET:geolocation-!cn":
+    "geosite:geolocation-!cn":
       - tls://1.1.1.1:853
       - tls://8.8.8.8:853
 
