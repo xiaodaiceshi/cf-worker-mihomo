@@ -177,6 +177,13 @@ dns:
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
     - RULE-SET:private_domain,fakeip_filter_domain,cn_domain,dns_domain
+    - "+.github.com"
+    - "+.githubusercontent.com"
+    - "+.raw.githubusercontent.com"
+    - "+.gitlab.com"
+    - "+.docker.io"
+    - "+.npmjs.org"
+    - "+.pypi.org"
   nameserver-policy:
     "RULE-SET:private_domain,cn_domain":
       - "quic://dns.alidns.com" # 阿里 DNS over DOQ
