@@ -206,14 +206,6 @@ dns:
   direct-nameserver-follow-policy: true
 
 rule-providers:
-  cn_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: mrs
-    proxy: DIRECT
-    url: "https://jsd.onmicrosoft.cn/gh/Kwisma/clash-rules@release/direct.mrs"
-    path: ./ruleset/China_Domain.mrs
   private_domain:
     type: http
     interval: 86400
