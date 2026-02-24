@@ -43,7 +43,7 @@ etag-support: true # 外部资源下载的 ETag 支持
 # info 输出一般运行的内容，以及 error 和 warning 级别的日志
 # debug 尽可能的输出运行中所有的信息
 log-level: info # 日志等级
-ipv6: true # 启用 IPv6
+ipv6: false # 启用 IPv6
 #tls: # TLS 相关配置
 #  certificate: string # TLS 证书
 #  private-key: string # TLS 私钥
@@ -170,7 +170,7 @@ dns:
   ipv6: false
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-
+  fake-ip-filter-mode: blacklist
   fake-ip-filter:
   - RULE-SET:private_domain,fakeip_filter_domain,cn_domain,dns_domain
   - "+.github.com"
