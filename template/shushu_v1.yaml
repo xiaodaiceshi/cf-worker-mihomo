@@ -281,7 +281,7 @@ rules:
   - GEOIP,private,全球直连,no-resolve
   - GEOSITE,category-games@cn,全球直连
   - GEOSITE,category-public-tracker,全球直连
-  - RULE-SET,custom_proxy,全部节点
+  - RULE-SET,custom_proxy,节点选择
   - GEOSITE,openai,AI
   - GEOSITE,category-ai-!cn,AI
   - RULE-SET,ai_domain,AI
