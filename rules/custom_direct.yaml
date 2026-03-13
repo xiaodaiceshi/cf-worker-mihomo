@@ -41,4 +41,3 @@ payload:
   # ----------------------------------------
   - 'DOMAIN-SUFFIX,wordpress.com'  # WordPress博客平台
   - 'DOMAIN-SUFFIX,gstatic.com'    # Google静态资源
-  - 'DOMAIN-SUFFIX,ssdinternet.pp.ua'     # 自由域名服务
