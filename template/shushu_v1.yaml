@@ -193,6 +193,7 @@ dns:
   fake-ip-filter:
     - "localhost"
     - "+.local"
+    - "+.saodu6.wang"  # <--- 添加这一行，+ 代表匹配所有子域名
     - RULE-SET:private_domain,fakeip_filter_domain,fakeip_filter_domain_2,cn_domain,dns_domain
   nameserver-policy:
     "RULE-SET:private_domain,cn_domain":
