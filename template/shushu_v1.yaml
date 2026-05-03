@@ -13,7 +13,7 @@ proxy-providers:
   Airport_01:
     <<: *PProviders
     proxy: "故障转移"
-    url: "https://substore.oracleone.pp.ua/APE1GXlO4URopg0nOmgR/download/collection/allinone"
+    url: "1"
     override:
       additional-prefix: '[🐭]'
       skip-cert-verify: true
