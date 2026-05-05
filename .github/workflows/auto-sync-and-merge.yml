@@ -33,11 +33,11 @@ jobs:
       - name: Sync main with upstream
         run: |
           git checkout main
-          git reset --hard upstream/main
-          git push origin main --force
+          git merge upstream/main --no-edit
+          git push origin main
 
       - name: Merge main into my-custom
         run: |
           git checkout my-custom
-          git merge origin/main --no-edit
+          git merge main --no-edit
           git push origin my-custom
