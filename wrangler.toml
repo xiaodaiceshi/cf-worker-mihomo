@@ -6,3 +6,4 @@ compatibility_flags = ["nodejs_compat"]
 [assets]
 directory = "./template"
 binding = "ASSETS"
+pages_build_output_dir = "dist"
