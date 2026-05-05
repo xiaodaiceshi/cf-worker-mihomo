@@ -136,8 +136,6 @@ dns:
   direct-nameserver:
     - 220.189.127.106
     - 220.189.127.107
-    - tcp://220.189.127.106:53
-    - tcp://220.189.127.107:53  
   nameserver:
     - "https://cloudflare-dns.com/dns-query#h3=true" # Cloudflare DNS over H3
     - "https://doh.opendns.com/dns-query" # Open DNS over DOH
