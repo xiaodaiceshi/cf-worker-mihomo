@@ -79,6 +79,16 @@ export default function configs() {
                         value: '/Lanlan13-14/configfull_beta.yaml',
                     },
                 ],
+                'shushu': [
+                    {
+                        label: 'shushu公共dns',
+                        value: '/shushu/shushu_v1.yaml',
+                    },
+                    {
+                        label: 'shushu运营商dns',
+                        value: '/shushu/shushu_v2.yaml',
+                    },
+                ],                
                 zhuqq2020: [
                     {
                         label: 'ACL4SSR_Online_Full 重度',
