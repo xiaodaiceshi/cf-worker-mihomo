@@ -15,7 +15,8 @@ payload:
   - 'DOMAIN-SUFFIX,daihome.pp.ua'       # DaiHome服务
   - 'DOMAIN,sublink.ssdceshi.pp.ua'     # 订阅链接服务
   - 'DOMAIN,magicsub.ssdceshi.pp.ua'    # Magic订阅服务
-  - 'DOMAIN,hutaosub.zeabur.app'        # 胡桃订阅服务
+  - 'DOMAIN,hutaosub.zeabur.app'  
+  - 'DOMAIN-SUFFIX,alibaba.com'       # 胡桃订阅服务
 
   # ----------------------------------------
   # 精确IP地址代理规则
