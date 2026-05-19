@@ -12,11 +12,12 @@ payload:
   # ----------------------------------------
   # 云服务和存储平台
   # ----------------------------------------
-  - 'DOMAIN-SUFFIX,daihome.pp.ua'       # DaiHome服务
-  - 'DOMAIN,sublink.ssdceshi.pp.ua'     # 订阅链接服务
-  - 'DOMAIN,magicsub.ssdceshi.pp.ua'    # Magic订阅服务
+  - 'DOMAIN-SUFFIX,daihome.pp.ua'       
+  - 'DOMAIN,sublink.ssdceshi.pp.ua'     
+  - 'DOMAIN,magicsub.ssdceshi.pp.ua'    
   - 'DOMAIN,hutaosub.zeabur.app'  
-  - 'DOMAIN-SUFFIX,alibaba.com'       # 胡桃订阅服务
+  - 'DOMAIN-SUFFIX,alibaba.com'       
+  - 'DOMAIN-SUFFIX,91porn.com'       
 
   # ----------------------------------------
   # 精确IP地址代理规则
