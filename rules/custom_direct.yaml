@@ -43,3 +43,4 @@ payload:
   - 'DOMAIN-SUFFIX,gstatic.com'    # Google静态资源
   - 'DOMAIN-SUFFIX,saodu6.wang'
   - 'DOMAIN-SUFFIX,siamparagon.org'
+  - 'DOMAIN-SUFFIX,emby-yd.n150.asia'
