@@ -103,13 +103,19 @@ const rurekey = {
   "United Kingdom London": /London|Great Britain/g,
   "Dubai United Arab Emirates": /United Arab Emirates/g,
   "Taiwan TW 台湾 🇹🇼": /(台|Tai\s?wan|TW).*?🇨🇳|🇨🇳.*?(台|Tai\s?wan|TW)/g,
-  "United States": /USA|Los Angeles|San Jose|Silicon Valley|Michigan/g,
+
+  // 美国 - 英文+中文统一处理（推荐写法）
+  "United States": /USA|Los Angeles|San Jose|Silicon Valley|Michigan|圣何塞|圣荷西|洛杉矶|LA|旧金山|圣弗朗西斯科|湾区|纽约|西雅图|芝加哥|达拉斯|休斯顿|华盛顿|迈阿密|亚特兰大|凤凰城|丹佛|波士顿|拉斯维加斯|圣地亚哥|费城|底特律|奥兰多|盐湖城|奥斯汀|波特兰|硅谷|美西|美东/gi,
+
   澳大利亚: /澳洲|墨尔本|悉尼|土澳|(深|沪|呼|京|广|杭)澳/g,
   德国: /(深|沪|呼|京|广|杭)德(?!.*(I|线))|法兰克福|滬德/g,
   香港: /(深|沪|呼|京|广|杭)港(?!.*(I|线))/g,
   日本: /(深|沪|呼|京|广|杭|中|辽)日(?!.*(I|线))|东京|大坂/g,
   新加坡: /狮城|(深|沪|呼|京|广|杭)新/g,
-  美国: /(深|沪|呼|京|广|杭)美|波特兰|芝加哥|哥伦布|纽约|硅谷|俄勒冈|西雅图|芝加哥/g,
+
+  // 下面这条优化后（去重 + 保留中文前缀特征）
+  美国: /(深|沪|呼|京|广|杭)美|哥伦布|俄勒冈|美西|美东|美国本土/gi,
+
   波斯尼亚和黑塞哥维那: /波黑共和国/g,
   印尼: /印度尼西亚|雅加达/g,
   印度: /孟买/g,
