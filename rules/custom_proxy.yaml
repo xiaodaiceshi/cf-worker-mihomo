@@ -18,7 +18,8 @@ payload:
   - 'DOMAIN,hutaosub.zeabur.app'  
   - 'DOMAIN-SUFFIX,alibaba.com'       
   - 'DOMAIN-SUFFIX,91porn.com'
-  - 'DOMAIN-SUFFIX,397888.xyz'       
+  - 'DOMAIN-SUFFIX,397888.xyz'
+  - 'DOMAIN-SUFFIX,bybit.com'       
 
   # ----------------------------------------
   # 精确IP地址代理规则
