@@ -1,8 +1,23 @@
+# ==========================================
+# IP 检测与查询规则
+# ==========================================
+
 payload:
-  - DOMAIN-SUFFIX,ping0.cc
-  - DOMAIN-SUFFIX,whoer.net
-  - DOMAIN-SUFFIX,scamalytics.com
-  - DOMAIN-SUFFIX,ipinfo.io
-  - DOMAIN-SUFFIX,whatismyiplookup.com
-  - DOMAIN-SUFFIX,ipdata.co
-  - DOMAIN-SUFFIX,iplocation.net
+  # ----------------------------------------
+  # IP 检测服务
+  # ----------------------------------------
+  - 'DOMAIN-SUFFIX,ping0.cc'              # IP 连通性检测
+  - 'DOMAIN-SUFFIX,whoer.net'             # IP/匿名性检测
+
+  # ----------------------------------------
+  # IP 信息与定位查询
+  # ----------------------------------------
+  - 'DOMAIN-SUFFIX,ipinfo.io'             # IP 信息查询
+  - 'DOMAIN-SUFFIX,ipdata.co'             # IP 数据查询
+  - 'DOMAIN-SUFFIX,iplocation.net'        # IP 地理位置查询
+  - 'DOMAIN-SUFFIX,whatismyiplookup.com'  # IP 查询
+
+  # ----------------------------------------
+  # IP 信誉/欺诈检测
+  # ----------------------------------------
+  - 'DOMAIN-SUFFIX,scamalytics.com'       # IP 欺诈评分
