@@ -21,16 +21,10 @@ payload:
   - 'DOMAIN-KEYWORD,youworld'    # youworld相关服务
 
   # ----------------------------------------
-  # 精确域名直连规则
-  # ----------------------------------------
-  - 'DOMAIN,wiki.ssdceshi.pp.ua'      # Wiki服务
-  - 'DOMAIN,fastblog.ssdceshi.pp.ua'  # 博客服务
-  - 'DOMAIN,fastlink.ssdceshi.pp.ua'  # 链接服务
-
-  # ----------------------------------------
   # 国内常用服务直连 (域名后缀匹配)
   # ----------------------------------------
   - 'DOMAIN-SUFFIX,ipw.cn'       # IP查询服务
+  - 'DOMAIN-SUFFIX,deepseek.com' # 深度思考服务
   - 'DOMAIN-SUFFIX,quasotech.cc' # 技术服务
   - 'DOMAIN-SUFFIX,oxdtang.top'  # 个人服务
   - 'DOMAIN-SUFFIX,bpjc.pics'    # 图片服务
