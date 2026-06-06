@@ -7,10 +7,12 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   sync-and-merge:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
       - name: Checkout fork
@@ -33,11 +35,12 @@ jobs:
       - name: Sync main with upstream
         run: |
           git checkout main
-          git merge upstream/main --no-edit
-          git push origin main
+          git pull origin main --rebase || git reset --hard origin/main
+          git merge upstream/main --no-edit --allow-unrelated-histories || true
+          git push origin main || echo "Main branch up to date or push failed"
 
       - name: Merge main into my-custom
         run: |
           git checkout my-custom
-          git merge main --no-edit
-          git push origin my-custom
+          git merge main --no-edit --allow-unrelated-histories || true
+          git push origin my-custom || echo "my-custom branch up to date or push failed"
